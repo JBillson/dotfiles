@@ -30,4 +30,4 @@ fi
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # oh-my-posh
-eval "$(oh-my-posh init bash)"
+eval "$(oh-my-posh init bash --config /mnt/c/Users/justi/.mytheme.omp.json)"
