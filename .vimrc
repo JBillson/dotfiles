@@ -29,7 +29,6 @@ set incsearch
 call plug#begin('~/.vim/plugged')
 Plug 'morhetz/gruvbox'
 Plug 'vim-utils/vim-man'
-Plug 'lyuts/vim-rtags'
 Plug 'mbbill/undotree'
 call plug#end()
 
