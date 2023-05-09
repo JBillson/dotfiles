@@ -13,10 +13,15 @@ function experiences {cd "C:\Users\justi\Documents\work\eden\experiences"}
 function startup {cd "C:\Users\justi\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
 function nvim-config {cd "C:\Users\justi\AppData\Local\nvim"}
 
+# functions
+function cguid {$guid = New-Guid 
+                $guid | Set-Clipboard
+                Write-Output $guid}
+
 # commands
 Set-Alias vim nvim
 
 #------------------------------------------------------------------#
 # ENVIRONMENT VARIABLES
 # [Komorebi]
-$Env:KOMOREBI_CONFIG_HOME = 'C:\Users\justi\.config\komorebi'
+$Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
