@@ -1,8 +1,8 @@
 .shell powershell
 
 # Reload whkd configuration
-alt + o                 : taskkill /f /im whkd.exe && Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
-alt + shift + o         : komorebic reload-configuration
+alt + q                 : taskkill /f /im whkd.exe && Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
+alt + shift + q         : komorebic reload-configuration
 
 # App shortcuts - these require shell to be pwsh / powershell
 # The apps will be focused if open, or launched if not open
@@ -20,11 +20,10 @@ alt + shift + h         : komorebic move left
 alt + shift + j         : komorebic move down
 alt + shift + k         : komorebic move up
 alt + shift + l         : komorebic move right
-alt + shift + return    : komorebic promote
 
 # Manage monitor focus
-alt + shift + oem_4     : komorebic focus-monitor 0
-alt + shift + oem_6     : komorebic focus-monitor 1
+alt + return            : komorebic cycle-monitor next
+alt + shift + return    : komorebic cycle-send-to-monitor next
 
 # Stack windows
 alt + left              : komorebic stack left
@@ -32,7 +31,6 @@ alt + down              : komorebic stack down
 alt + up                : komorebic stack up
 alt + right             : komorebic stack right
 alt + oem_1             : komorebic unstack # oem_1 is ;
-alt + oem_4             : komorebic cycle-stack previous # oem_4 is [
 alt + oem_6             : komorebic cycle-stack next # oem_6 is ]
 
 # Resize
@@ -44,6 +42,7 @@ alt + shift + oem_minus : komorebic resize-axis vertical decrease
 # Manipulate windows
 alt + t                 : komorebic toggle-float
 alt + shift + f         : komorebic toggle-monocle
+alt + w                 : komorebic close
 
 # Window manager options
 alt + shift + r         : komorebic retile
