@@ -16,6 +16,7 @@ function experiences {Set-Location "C:\Eden"}
 function startup {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
 function nvimConfig {Set-Location "$HOME\AppData\Local\nvim"}
 function vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
+function dotfiles {Set-Location "$HOME\Documents\work\personal\dotfiles"}
 
 # komorebic
 function krestart {komorebic stop && komorebic start -a}
@@ -32,7 +33,7 @@ Set-Alias vim nvim
 Set-Alias reboot Restart-Computer
 Set-Alias shutdown Stop-Computer
 
-# functions
+# custom functions
 function cguid {$guid = New-Guid 
                 $guid | Set-Clipboard
                 Write-Output $guid}
@@ -45,9 +46,15 @@ $Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
 $Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
 
 #------------------------------------------------------------------#
+# AUTO LAUNCH
 
-# [komorebi] - launch komorebi if not runnning
+# [komorebi]
 $komorebi = Get-Process komorebi -ErrorAction SilentlyContinue
 if (!$komorebi){
   komorebic start -a
+}
+
+$yasb = Get-Process python -ErrorAction SilentlyContinue
+if (!$yasb){
+  Start-Process -FilePath "C:\Users\justi\AppData\Local\Programs\Python\Python310\python.exe" -ArgumentList "$HOME/Documents/work/personal/yasb/src/main.py" -WindowStyle Hidden
 }
