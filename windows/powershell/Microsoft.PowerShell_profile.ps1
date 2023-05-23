@@ -12,13 +12,20 @@ Import-Module -Name Terminal-Icons
 # paths
 function personal {Set-Location "$HOME\Documents\work\personal\"}
 function eden {Set-Location "$HOME\Documents\work\eden\"}
-function experiences {Set-Location "$HOME\Documents\work\eden\experiences"}
+function experiences {Set-Location "C:\Eden"}
 function startup {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
 function nvimConfig {Set-Location "$HOME\AppData\Local\nvim"}
 function vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
+
+# komorebic
 function krestart {komorebic stop && komorebic start -a}
 function kstart {komorebic start -a}
 function kstop {komorebic stop}
+
+# git
+function gs {git status}
+function ga {git add .}
+function gp {git pull}
 
 # commands
 Set-Alias vim nvim
