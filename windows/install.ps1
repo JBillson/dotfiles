@@ -3,7 +3,7 @@ sudo New-Item -ItemType Directory -Path "~/.config" -ErrorAction SilentlyContinu
 
 # create sym links
 sudo New-Item -ItemType SymbolicLink -Path "~/.gitconfig" -Target "${pwd}/git/.gitconfig" -ErrorAction SilentlyContinue
-sudo New-Item -ItemType SymbolicLink -Path "~/.config/komorebi/whkdrc" -Target "${pwd}/whkdrc" -ErrorAction SilentlyContinue
+sudo New-Item -ItemType SymbolicLink -Path "~/.config/whkdrc" -Target "${pwd}/komorebi/whkdrc" -ErrorAction SilentlyContinue
 sudo New-Item -ItemType SymbolicLink -Path "~/.config/komorebi" -Target "${pwd}/komorebi" -ErrorAction SilentlyContinue
 sudo New-Item -ItemType SymbolicLink -Path "~/AppData/Local/nvim" -Target "${pwd}/nvim" -ErrorAction SilentlyContinue
 sudo New-Item -ItemType SymbolicLink -Path "~/.config/ohmyposh/" -Target "${pwd}/ohmyposh" -ErrorAction SilentlyContinue

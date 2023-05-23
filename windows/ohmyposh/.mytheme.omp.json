@@ -12,7 +12,7 @@
           "type": "path",
           "style": "diamond",
           "foreground": "#ffffff",
-          "background": "#FF9248",
+          "background": "#2363af",
           "leading_diamond": "",
           "trailing_diamond": "",
           "template": "   {{ .Path }} ",

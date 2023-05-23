@@ -3,4 +3,4 @@
 My dot files for Windows and WSL environments
 
 ## Windows
-Run `install.ps1` 
+Run `windows/install.ps1` 
