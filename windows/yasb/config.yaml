@@ -96,7 +96,7 @@ bars:
     widgets:
       left:   ["komorebi_workspaces", "komorebi_active_layout", "active_window"]
       center: ["clock"]
-      right:  ["weather","ip_info", "cpu", "memory", "battery"]
+      right:  ["ip_info", "cpu", "memory", "battery"]
 
 # widgets:
   # my-clock-widget:
@@ -378,20 +378,21 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-        label: "{%A %d %B, %H:%M %p}"
+        label: "{%A %d %B, %I:%M %p}"
         timezones: ["Africa/Johannesburg"]
 
   cpu:
     type: "yasb.cpu.CpuWidget"
     options:
-      label: "\uf200 {info[percent][total]}%"
+      label: "\uf109  {info[percent][total]}%"
+      label_alt: "\uf109  {info[freq][current]} MHz"
       update_interval: 500
 
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
-        label: "\uf538 {virtual_mem_percent}%"
-        label_alt: "\uf538 {virtual_mem_free}"
+        label: "\uf25d  {virtual_mem_percent}%"
+        label_alt: "\uf25d  {virtual_mem_free}"
         update_interval: 500
         callbacks:
           on_right: "exec cmd /c Taskmgr"
@@ -431,8 +432,8 @@ widgets:
   ip_info:
     type: "yasb.custom.CustomWidget"
     options:
-      label: "\uf3c5 {data[city]}, {data[region]}"
-      label_alt: "\uf3c5 {data[ip]} [{data[country]}]"
+      label: "\uf041 {data[city]}, {data[region]}"
+      label_alt: "\uf6ff {data[ip]}"
       class_name: "ip-info-widget"
       exec_options:
         run_cmd: "curl.exe https://ipinfo.io"
