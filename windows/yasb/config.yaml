@@ -96,7 +96,7 @@ bars:
     widgets:
       left:   ["komorebi_workspaces", "komorebi_active_layout", "active_window"]
       center: ["clock"]
-      right:  ["ip_info", "cpu", "memory", "battery"]
+      right:  ["ip_info", "cpu", "memory", "battery", "exit"]
 
 # widgets:
   # my-clock-widget:
@@ -373,6 +373,8 @@ widgets:
   battery:
     type: "yasb.battery.BatteryWidget"
     options:
+      label: "{icon}  {percent}%"
+      label_alt: "\uf017 {time_remaining}"
       time_remaining_natural: true
 
   clock:
@@ -380,6 +382,8 @@ widgets:
     options:
         label: "{%A %d %B, %I:%M %p}"
         timezones: ["Africa/Johannesburg"]
+        callbacks: 
+          on_left: "do_nothing"
 
   cpu:
     type: "yasb.cpu.CpuWidget"
@@ -456,3 +460,12 @@ widgets:
         # run_interval: 3600000
         run_interval: 120000 # every 5 minutes
         return_format: "json"
+
+  exit:
+    type: "yasb.custom.CustomWidget"
+    options:
+      class_name: "exit-widget"
+      label: "\uf00d"
+      label_alt: ""
+      callbacks:
+        on_left: "exec cmd /c taskkill /f /im python.exe && komorebic stop"
