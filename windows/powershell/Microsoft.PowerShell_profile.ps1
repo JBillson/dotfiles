@@ -25,6 +25,7 @@ function kstop {komorebic stop}
 
 # git
 function gs {git status}
+function gd {git diff}
 function ga {git add .}
 function gp {git pull}
 
@@ -56,5 +57,5 @@ if (!$komorebi){
 
 $yasb = Get-Process python -ErrorAction SilentlyContinue
 if (!$yasb){
-  Start-Process -FilePath "C:\Users\justi\AppData\Local\Programs\Python\Python310\python.exe" -ArgumentList "$HOME/Documents/work/personal/yasb/src/main.py" -WindowStyle Hidden
+  Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python310/python.exe" -ArgumentList "$HOME/Documents/work/personal/yasb/src/main.py" -WindowStyle Hidden
 }
