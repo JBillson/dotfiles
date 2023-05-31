@@ -40,9 +40,15 @@ function cguid {$guid = New-Guid
                 Write-Output $guid}
 
 #------------------------------------------------------------------#
+# OTHER
+
+# [gsudo !! support]
+Import-Module "$HOME\scoop\apps\gsudo\2.0.9\gsudoModule.psd1"
+
+#------------------------------------------------------------------#
 # ENVIRONMENT VARIABLES
 
-# [Komorebi]
+# [Komorebi + WHKD]
 $Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
 $Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
 
@@ -55,7 +61,10 @@ if (!$komorebi){
   komorebic start -a
 }
 
+# [yasb]
 $yasb = Get-Process python -ErrorAction SilentlyContinue
 if (!$yasb){
   Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python310/python.exe" -ArgumentList "$HOME/Documents/work/personal/yasb/src/main.py" -WindowStyle Hidden
 }
+
+#------------------------------------------------------------------#
