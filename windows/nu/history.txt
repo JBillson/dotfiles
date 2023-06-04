@@ -1,0 +1,385 @@
+ls
+eden
+cd Documents
+cd work\personal\dotfiles\windows\ohmyposh\
+ls
+cd ~
+ls
+cd Documents\
+ls
+cd work
+ls
+cd ~
+ls
+cd Documents\work\eden\ls
+ls
+$env
+cd Documents\work\eden\
+ls
+cd C:/Eden
+ls
+ls | sort-by size | reverse
+cd 489D4ECD-770C-47E7-A97E-E938500B55CE\
+ls
+ls | sort-by size | reverse
+cd ../
+ls | where type is file
+ls | where type == file
+ls | where type == dir
+ps
+ps 
+ps | where name == python
+ps | where name contains python
+ps | where name =~ 'python'
+ps | where name = 'python'
+ps | where name == 'python'
+ps | where name =~ 'python'
+ps
+ps | where cpu > 1
+ps
+ps | where cpu > 1
+ps | where mem > 50
+ps | where mem > 50MB
+ps | where mem > 100MB
+ps | where mem > 100 MB
+ps | where mem > 1GB
+ps | where mem > 1000kb
+ps | where mem > 1mb
+ps | where mem > 100mb
+sys
+sys | table
+sys
+sys | get host
+sys
+sys | get disks
+ps 
+ps | get name
+ps | where mem > 10mb | get name
+ps | where mem > 10mb 
+ps | where cpu > 1 | get name
+sys
+sys | get hosts
+sys | get host
+sys | get host.sessions
+sys | get host.sessions.justi
+sys | get host.sessions | where name == justi
+sys | get host.sessions | where name == justi | get groups
+date now
+date now | date to-table
+date now | date to-table | get timezone
+date now | date to-table | get year
+date now | date to-table | echo year
+date now | date to-table | echo $year
+date now | date to-table | get year | echo
+date now | date to-table | get year | ^echo
+^echo
+^echo off
+^echo
+^echo off
+ls
+ls | get name | each { |name| echo $name }
+ls | get name | each { |name| ^echo $name }
+ls
+ls | get name size
+ls | get name size | to-table
+ls | get name size | table
+ls | get name,size
+ls | get name, size
+ls | get name size
+ls | get name size | join
+ls | get name size | join name size
+help
+ls | sort-by size
+ls -r | sort-by size
+ls -h
+ls -d
+ls -D
+ls -Dd
+ls -dD
+ls
+cd dev-small-space\
+ls -dD
+ls
+ls -d
+path 
+path basename
+path dirname
+path type
+path
+pwd
+pdw
+currentdir
+help
+help commands
+ls
+zip `4229ad5a-f424-4d25-a5ad-2953e4885c56\`
+zip help
+zip -r `4229ad5a-f424-4d25-a5ad-2953e4885c56\`
+sys | to-json
+sys | to json
+sys | get host | to json
+help commands
+help aliases
+PWD
+echo PWD
+^ehco PWD
+echo $PWD
+$env
+$env | where name =~ nu
+$env | where record =~ nu
+$nu.config-path
+$nu
+$nu | where
+$nu | where 0 != scope
+$nu
+ls
+cd 4229ad5a-f424-4d25-a5ad-2953e4885c56\
+ls
+ls *.mp4
+ls *.webm
+ls
+ls *.png
+ls *.png *.mp4
+ls '*.png *.mp4<\n>'
+ls '*.png *.mp4'
+cd ../
+ls **/*
+ls **/* | where type != dir
+ls **/* | where type != dir | to json
+.\4229ad5a-f424-4d25-a5ad-2953e4885c56\
+../
+ls
+f767ef41-f020-48b4-bca6-0349a89fb9bd\
+.\f767ef41-f020-48b4-bca6-0349a89fb9bd\
+./
+../
+f767ef41-f020-48b4-bca6-0349a89fb9bd\
+f767ef41-f020-48b4-bca6-0349a89fb9bd
+.\f767ef41-f020-48b4-bca6-0349a89fb9bd\
+ls
+cd ../../
+ls
+cp dev-small-space\ test
+cp -r dev-small-space\ test
+ls
+cp -r test test2 test3
+ls
+rm -r test
+ls
+cp -r dev-small-space\ test
+rm test
+rm -r test
+ls
+ls | where type == file | each { |file|<\n>echo $file<\n>}
+ls
+cd F41146F1-83F2-49AC-B872-3A093DB524A4\
+ls | where type == file | each { |file|<\n>echo $file<\n>}
+ls | where type == file | each { |file|<\n>echo $file.name<\n>}
+ls | where type == file | each { |file|<\n>echo $file.name && echo $file.size<\n>}
+ls | where type == file | each { |file|<\n>echo $file.name and echo $file.size<\n>}
+ls | where type == file | each { |file|<\n>echo $file.name and $file.size<\n>}
+ls | where type == file | each { |file|<\n>echo $file.name<\n>}
+ls | where type == dir | each { |dir|<\n>echo $dir.name<\n>cd $dir.name<\n>ls *.png<\n>cd ../<\n>}
+ls | where type == dir | each { |dir|<\n>echo $dir.name<\n>cd $dir.name<\n>ls <\n>}
+ls | where type == dir | each { |dir|<\n>echo $dir.name<\n>cd $dir.name<\n>echo path<\n>cd ../<\n>}
+ls | each { |it|<\n>cd $it.name<\n>echo path<\n>}
+ls | where type == dir | each { |it|<\n>cd $it.name<\n>echo path<\n>}
+ehco path
+echo path
+echo $PWD
+echo pwd
+echo $path
+echo ls
+ls | where type == dir | each { |it|<\n>ls<\n>}
+cd ../
+ls | where type == dir | each { |it|<\n>ls<\n>}
+ls
+ls dir
+ls | where type == dir
+ls | where type == dir | each { |it|<\n>ls<\n>}
+ls | where type == dir | each { |it|<\n>ls<\n>} | expand
+expand
+ls
+ls # 10
+ls # 5
+ls 5
+ls
+eden
+cd ~\Documents\work\eden\EdenSnackerUnity\Builds\
+adb install -r snacker.apk
+ssh eden@192.168.1.160
+ssh eden@192.168.1.217
+adb install -r snacker.apk
+ls
+cd ..\..\EdenStationUnity\Builds
+ls
+ssh eden@192.168.1.217
+scp -r Unity.zip eden@192.168.1.217:~
+cd ..\..\EdenSnackerUnity\Builds
+adb install -r snacker.apk
+adb logcat -s UNITY DEBUG
+adb logcat -s Unity DEBUG
+adb install -r snacker.apk
+adb logcat -s Unity DEBUG
+adb install -r snacker.apk
+adb logcat -s Unity DEBUG
+adb install -r snacker.apk
+adb logcat -s Unity DEBUG
+adb install -r snacker.apk
+ls
+ssh eden@192.168.1.217
+ssh eden@172.16.3.225
+ssh eden@172.16.3.255
+cd ~\Documents\work\eden\EdenSnackerUnity\Builds\
+adb install -r snacker.apk
+ssh eden@172.16.1.109
+ls
+adb install -r snacker.apk
+adb logcat -s Unity DEBUG
+adb install -r snacker.apk
+ssh eden@172.16.1.109
+adb install -r snacker.apk
+adb logcat -s Unity DEBUG
+ssh eden@172.16.1.109
+adb install -r snacker.apk
+adb logcat -s Unity DEBUG
+adb install -r snacker.apk
+adb logcat -s Unity DEBUG
+adb install -r snacker.apk
+adb logcat -s Unity DEBUG
+adb install -r snacker.apk
+adb logcat -s Unity DEBUG
+adb install -r snacker.apk
+adb logcat -s Unity DEBUG
+cd ../
+git status
+git branch -a
+ssh eden@172.16.1.109
+ls
+ls
+dotfiles
+ls
+ls | where type == file
+ls | where size > 20B
+ls | where size > 19B
+ls
+rm -r `489D4ECD-770C-47E7-A97E-E938500B55CE.zip`
+ls
+rm -r dev-small-space\
+ls
+cd 4af0a4e3-f17c-42a8-8b91-a4b219826fbe\
+vim payload.json
+nvim payload.json
+cd ..\0fc5010b-d39b-492f-8907-71e2f8532eee\
+ls
+vim payload.json
+nvim payload.json
+ls
+ls -a 
+rm -r desktop.ini
+ls
+la
+ls -a
+rm payload.json
+mv new-manifest.json payload.json
+ls
+nvim payload.json
+ls
+ssh eden@172.16.1.109
+cd ../
+scp -r `0fc5010b-d39b-492f-8907-71e2f8532eee\` eden@172.16.1.109:~/
+ssh eden@172.16.1.109
+ls
+rm output.mp4 RFHScreensaver.mp4 RFHScreensaverAudio.mp3
+ls
+ssh eden@172.16.1.109
+cd 0fc5010b-d39b-492f-8907-71e2f8532eee\
+ls
+cd ~\Downloads\
+ffprobe -i RFHScreensaver1920x1200compressed.mp4 -hide_banner
+nvim payload.json
+ffprobe -i RFHScreensaver1920x1200compressed.mp4 -hide_banner
+ffprobe -i RFHScreensaver1920x1200.mp4 -hide_banner
+ffmpeg -i RFHScreensaver1920x1200.mp4 -i RFHScreensaverAudio.mp3 -c:v copy -c:a aac output.mp4
+ffprobe -i output.mp4
+nvim payload.json
+ssh eden@172.16.1.109
+nvim payload.json
+ssh eden@172.16.1.109
+vim payload.json
+nvim payload.json
+ffprobe -i d8a2210a-d463-4a80-86d8-c30b02aede83.webm
+nvim payload.json
+scp -r d8a2210a-d463-4a80-86d8-c30b02aede83.webm eden@172.16.1.109:/mnt/ssd
+ls
+ls | where modified = "tdoay"
+ls | where modified = "today"
+ls
+explorer .
+ls
+cd 0fc5010b-d39b-492f-8907-71e2f8532eee\
+l
+ls
+cguid
+ssh eden@172.16.1.109
+ls
+mv RFHExperiencePosterCover.png b46e5264-d040-463b-9586-a41e3ff22eea.png
+vim payload.json
+nvim payload.json
+ls
+rm payload.json
+mv new-manifest.json payload.json
+ls
+scp -r payload.json b46e5264-d040-463b-9586-a41e3ff22eea.png eden@172.16.1.109:/mnt/ssd
+cd ~\Downloads\
+ls
+ssh eden@172.16.1.109
+cd ../
+cd drive-download-20230602T100805Z-0013dsfadf\
+ls
+ffmpeg -i RFHScreensaver1920x1200.mp4 -i RFHScreensaverAudio.mp3 -c:v copy -c:a libvorbis output.mp4
+ls
+cd ../
+ls
+cd 0fc5010b-d39b-492f-8907-71e2f8532eee\
+scp -r payload.json d8a2210a-d463-4a80-86d8-c30b02aede83.webm eden@172.16.1.109:/mnt/ssd
+ssh eden@172.16.1.109
+nvim payload.json
+ls
+rm payload.json
+mv new-manifest.json payload.json
+vim payload.json
+nvim payload.json
+ssh eden@172.16.1.109
+nvim payload.json
+cd ../
+(http get https://api.chucknorris.io/jokes/random).value
+echo $nu.env-path
+mkdir ~/.config/nu/
+cp C:\Users\justi\AppData\Roaming\nushell\env.nu ~/.config/nu/
+$nu.env-path='$HOME/.config/nu/'
+$nu.env-path= '$HOME/.config/nu/'
+echo $nu.env-path
+echo $env.config
+let-env config = {<\n>}
+echo $env.config
+ls
+echo $env.config
+vim $env.config
+nvim $env.config
+config nu
+config nu $VISUAL
+nu --version
+$env.EDITOR
+$env
+config nu
+nvim
+$nu.config-path
+nvim $nu.config-path
+config env
+$nu.env
+$nu.env-path
+nvim $nu.env-path
+$nu.default-config-dir
+echo $HOME
+cp C:\Users\justi\AppData\Roaming\nushell ~/.config/nu
