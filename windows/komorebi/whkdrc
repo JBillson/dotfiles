@@ -48,10 +48,6 @@ alt + w                 : komorebic close
 alt + shift + r         : komorebic retile
 alt + p                 : komorebic toggle-pause
 
-# Layouts
-alt + x                 : komorebic flip-layout horizontal
-alt + y                 : komorebic flip-layout vertical
-
 # Workspaces
 alt + 1                 : komorebic focus-workspace 0
 alt + 2                 : komorebic focus-workspace 1
@@ -73,3 +69,15 @@ alt + shift + 6         : komorebic move-to-workspace 5
 alt + shift + 7         : komorebic move-to-workspace 6
 alt + shift + 8         : komorebic move-to-workspace 7
 alt + shift + 9         : komorebic move-to-workspace 8
+
+# Layout type
+alt + Numpad0          : komorebic change-layout bsp
+alt + Numpad1          : komorebic change-layout columns
+alt + Numpad2          : komorebic change-layout rows
+alt + Numpad3          : komorebic change-layout vertical-stack
+alt + Numpad4          : komorebic change-layout horizontal-stack
+alt + Numpad5          : komorebic change-layout ultrawide-vertical-stack
+
+# Layout manipulation
+alt + x                 : komorebic flip-layout horizontal
+alt + y                 : komorebic flip-layout vertical
