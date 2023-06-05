@@ -72,13 +72,11 @@ komorebic initial-named-workspace-rule title "YouTube Music" IX
 komorebic invisible-borders 7 0 14 7
 
 # Set active window border
-# rgb(43, 122, 216) rgb(83, 25, 14)
+komorebic active-window-border-width 15 
+komorebic active-window-border-offset -- -3 
 komorebic active-window-border-colour 43 122 216 --window-kind single
 komorebic active-window-border-colour 0 255 0 --window-kind stack
 komorebic active-window-border-colour 255 0 0 --window-kind monocle 
 komorebic active-window-border enable 
-
-# Set active window border width
-komorebic active-window-border-width 15 
 
 komorebic complete-configuration
