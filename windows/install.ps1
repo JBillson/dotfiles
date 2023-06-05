@@ -68,7 +68,7 @@ if (!(Test-Path -Path $yasb)){
 $nu = '~/AppData/Roaming/nushell/'
 if (!(Test-Path -Path $nu)){
   echo "Creating nushell symlink"
-  sudo New-Item -ItemType SymbolicLink -Path "~/AppData/Roaming/nushell/" -Target "${pwd}/nu" -ErrorAction SilentlyContinue
+  sudo New-Item -ItemType SymbolicLink -Path "~/AppData/Roaming/nushell/" -Target "${pwd}/nushell" -ErrorAction SilentlyContinue
   $changes = 'true'
 }
 
