@@ -370,7 +370,7 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-        label: "{%A %d %B, %I:%M %p}"
+        label: "{%A %d %B, %H:%M %p}"
         timezones: ["Africa/Johannesburg"]
         callbacks: 
           on_left: "do_nothing"
