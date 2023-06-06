@@ -94,9 +94,9 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left:   ["komorebi_workspaces", "komorebi_active_layout", "active_window"]
-      center: ["clock"]
-      right:  ["ip_info", "cpu", "memory", "battery", "exit"]
+      left:   ["clock"]
+      center: ["komorebi_workspaces", "komorebi_active_layout", "active_window"]
+      right:  ["cpu", "memory", "battery", "exit"]
 
 # widgets:
   # my-clock-widget:
@@ -360,16 +360,6 @@ bars:
         # on_right: "do_nothing"
 
 widgets:
-  active_window:
-    type: "yasb.active_window.ActiveWindowWidget"
-    options:
-      label: "{win[title]}"
-      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
-      label_no_window: ""
-      max_length: 48
-      max_length_ellipsis: "..."
-      monitor_exclusive: true
-
   battery:
     type: "yasb.battery.BatteryWidget"
     options:
@@ -416,12 +406,12 @@ widgets:
       hide_if_offline: false
       label: "{icon}"
       layout_icons:
-        bsp: "[\\\\]"
-        columns: "[||]"
-        rows: "[==]"
-        vertical_stack: "[V]="
-        horizontal_stack: "[H]="
-        ultrawide_vertical_stack: "||="
+        bsp: "[bsp]"
+        columns: "[col]"
+        rows: "[row]"
+        vertical_stack: "[v-stack]"
+        horizontal_stack: "[h-stack]"
+        ultrawide_vertical_stack: "[u-v-stack]"
         monocle: "[M]"
         maximised: "[X]"
         floating: "><>"
@@ -431,23 +421,19 @@ widgets:
         on_middle: 'toggle_monocle'
         on_right: 'prev_layout'
 
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    options:
+      label: "{win[title]}"
+      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
+      label_no_window: ""
+      max_length: 48
+      max_length_ellipsis: "..."
+      monitor_exclusive: true
+
   # Some custom widgets
 
-  ip_info:
-    type: "yasb.custom.CustomWidget"
-    options:
-      label: "\uf041 {data[city]}, {data[region]}"
-      label_alt: "\uf6ff {data[ip]}"
-      class_name: "ip-info-widget"
-      exec_options:
-        run_cmd: "curl.exe https://ipinfo.io"
-        run_interval: 120000                                        # every 5 minutes
-        return_format: "json"
-      callbacks:
-        on_left: "toggle_label"
-        on_middle: "exec cmd /c ncpa.cpl"                           # open network settings
-        on_right: "exec cmd /c start https://ipinfo.io/{data[ip]} " # open ipinfo in browser
-
+  # DOESN'T WORK
   weather:
     type: "yasb.custom.CustomWidget"
     options:
