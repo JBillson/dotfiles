@@ -3,9 +3,6 @@
 # [oh my posh] - init pwsh with oh-my-posh
 oh-my-posh init pwsh --config "$HOME/.config/ohmyposh/.mytheme.omp.json" | Invoke-Expression
 
-# [terminal-icons]
-Import-Module -Name Terminal-Icons
-
 #------------------------------------------------------------------#
 # ALIASES
 
@@ -34,13 +31,18 @@ Set-Alias vim nvim
 Set-Alias reboot Restart-Computer
 Set-Alias shutdown Stop-Computer
 
-# custom functions
+#------------------------------------------------------------------#
+# CUSTOM FUNCTIONS
+
 function cguid {$guid = New-Guid 
                 $guid | Set-Clipboard
                 Write-Output $guid}
 
 #------------------------------------------------------------------#
-# OTHER
+# MODULES
+
+# [terminal-icons]
+Import-Module -Name Terminal-Icons
 
 # [gsudo !! support]
 Import-Module "$HOME\scoop\apps\gsudo\2.0.9\gsudoModule.psd1"
