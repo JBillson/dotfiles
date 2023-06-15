@@ -22,14 +22,14 @@ alt + shift + k         : komorebic move up
 alt + shift + l         : komorebic move right
 
 # Manage monitor focus
-alt + return            : komorebic cycle-monitor next
-alt + shift + return    : komorebic cycle-send-to-monitor next
+alt + back              : komorebic cycle-monitor next
+alt + shift + back      : komorebic cycle-send-to-monitor next
 
 # Stack windows
-alt + left              : komorebic stack left
-alt + down              : komorebic stack down
-alt + up                : komorebic stack up
-alt + right             : komorebic stack right
+alt + ctrl + h          : komorebic stack left
+alt + ctrl + j          : komorebic stack down
+alt + ctrl + k          : komorebic stack up
+alt + ctrl + l          : komorebic stack right
 alt + oem_1             : komorebic unstack # oem_1 is ;
 alt + oem_6             : komorebic cycle-stack next # oem_6 is ]
 
