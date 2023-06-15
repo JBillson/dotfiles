@@ -53,8 +53,8 @@ if (!(Test-Path -Path $pwsh)){
 
 $WindowsTerminal = '~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json'
 if (!(Test-Path -Path $WindowsTerminal)){
-  echo "Creating WindowsTerminal hardlink"
-  sudo New-Item -ItemType HardLink -Path $WindowsTerminal -Target "${pwd}/windows-terminal/settings.json" -ErrorAction SilentlyContinue
+  echo "Creating WindowsTerminal symlink"
+  sudo New-Item -ItemType SymbolicLink  $WindowsTerminal -Target "${pwd}/windows-terminal/settings.json" -ErrorAction SilentlyContinue
   $changes = 'true'
 }
 
