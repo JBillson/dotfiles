@@ -7,8 +7,8 @@ oh-my-posh init pwsh --config "$HOME/.config/ohmyposh/.mytheme.omp.json" | Invok
 # ALIASES
 
 # paths
-function personal {Set-Location "$HOME\Documents\work\personal\"}
-function eden {Set-Location "$HOME\Documents\work\eden\"}
+function personal {Set-Location "$HOME\Documents\personal\"}
+function eden {Set-Location "$HOME\Documents\eden\"}
 function experiences {Set-Location "C:\Eden"}
 function startup {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
 function nvimConfig {Set-Location "$HOME\AppData\Local\nvim"}
@@ -21,10 +21,12 @@ function kstart {komorebic start -a}
 function kstop {komorebic stop}
 
 # git
-function gs {git status}
-function gd {git diff}
-function ga {git add .}
-function gp {git pull}
+function _gs {git status}
+function _gd {git diff}
+function _ga {git add .}
+function _gpl {git pull}
+function _gps {git push}
+function _gc {git commit}
 
 # commands
 Set-Alias vim nvim
@@ -42,17 +44,17 @@ function cguid {$guid = New-Guid
 # MODULES
 
 # [terminal-icons]
-Import-Module -Name Terminal-Icons
+Import-Module 'C:\Users\justi\.config\PowerShell\Modules\Terminal-Icons\0.10.0\Terminal-Icons.psd1'
 
-# [gsudo !! support]
-Import-Module "$HOME\scoop\apps\gsudo\2.0.9\gsudoModule.psd1"
+# [gsudo]
+Import-Module 'C:\Program Files\gsudo\2.0.9\gsudoModule.psd1'
 
 #------------------------------------------------------------------#
 # ENVIRONMENT VARIABLES
 
 # [Komorebi + WHKD]
 $Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
-$Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
+$Env:WHKD_CONFIG_HOME = "$HOME\.config"
 
 #------------------------------------------------------------------#
 # AUTO LAUNCH
@@ -66,7 +68,7 @@ if (!$komorebi){
 # [yasb]
 $yasb = Get-Process python -ErrorAction SilentlyContinue
 if (!$yasb){
-  Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python310/python.exe" -ArgumentList "$HOME/Documents/work/personal/yasb/src/main.py" -WindowStyle Hidden
+  Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python311/python.exe" -ArgumentList "$HOME/Documents/personal/yasb/src/main.py" -WindowStyle Hidden
 }
 
 #------------------------------------------------------------------#

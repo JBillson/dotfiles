@@ -52,11 +52,7 @@ if (!(Test-Path -Path $pwsh)){
 }
 
 $WindowsTerminal = '~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json'
-if (!(Test-Path -Path $WindowsTerminal)){
-  echo "Creating WindowsTerminal symlink"
-  sudo New-Item -ItemType SymbolicLink  $WindowsTerminal -Target "${pwd}/windows-terminal/settings.json" -ErrorAction SilentlyContinue
-  $changes = 'true'
-}
+sudo New-Item -ItemType SymbolicLink  $WindowsTerminal -Target "${pwd}/windows-terminal/settings.json" -ErrorAction SilentlyContinue
 
 $yasb = '~/.config/yasb'
 if (!(Test-Path -Path $yasb)){
@@ -71,9 +67,6 @@ if (!(Test-Path -Path $nu)){
   sudo New-Item -ItemType SymbolicLink -Path "~/AppData/Roaming/nushell/" -Target "${pwd}/nushell" -ErrorAction SilentlyContinue
   $changes = 'true'
 }
-
-
-
 
 if (!$changes){
   echo "No changes made, you're all setup already!"
