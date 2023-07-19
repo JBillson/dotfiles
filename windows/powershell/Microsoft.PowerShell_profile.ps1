@@ -7,8 +7,8 @@ oh-my-posh init pwsh --config "$HOME/.config/ohmyposh/.mytheme.omp.json" | Invok
 # ALIASES
 
 # paths
-function personal {Set-Location "$HOME\Documents\personal\"}
-function eden {Set-Location "$HOME\Documents\eden\"}
+function personal {Set-Location "$HOME\Documents\work\personal\"}
+function eden {Set-Location "$HOME\Documents\work\eden\"}
 function experiences {Set-Location "C:\Eden"}
 function startup {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
 function nvimConfig {Set-Location "$HOME\AppData\Local\nvim"}
@@ -68,7 +68,7 @@ if (!$komorebi){
 # [yasb]
 $yasb = Get-Process python -ErrorAction SilentlyContinue
 if (!$yasb){
-  Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python311/python.exe" -ArgumentList "$HOME/Documents/personal/yasb/src/main.py" -WindowStyle Hidden
+  Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python310/python.exe" -ArgumentList "$HOME/Documents/personal/yasb/src/main.py" -WindowStyle Hidden
 }
 
 #------------------------------------------------------------------#
