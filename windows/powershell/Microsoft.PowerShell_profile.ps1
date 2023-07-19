@@ -68,7 +68,7 @@ if (!$komorebi){
 # [yasb]
 $yasb = Get-Process python -ErrorAction SilentlyContinue
 if (!$yasb){
-  Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python310/python.exe" -ArgumentList "$HOME/Documents/personal/yasb/src/main.py" -WindowStyle Hidden
+  Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python310/python.exe" -ArgumentList "$HOME/Documents/work/personal/yasb/src/main.py" -WindowStyle Hidden
 }
 
 #------------------------------------------------------------------#
