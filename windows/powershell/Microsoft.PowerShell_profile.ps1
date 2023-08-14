@@ -13,7 +13,7 @@ function experiences {Set-Location "C:\Eden"}
 function startup {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
 function nvimConfig {Set-Location "$HOME\AppData\Local\nvim"}
 function vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
-function dotfiles {Set-Location "$HOME\Documents\personal\dotfiles"}
+function dotfiles {Set-Location "$HOME\Documents\work\personal\dotfiles"}
 
 # komorebic
 function krestart {komorebic stop && komorebic start -a}
@@ -32,6 +32,9 @@ function _gc {git commit}
 Set-Alias vim nvim
 Set-Alias reboot Restart-Computer
 Set-Alias shutdown Stop-Computer
+
+# other
+function ex {explorer .}
 
 #------------------------------------------------------------------#
 # CUSTOM FUNCTIONS
