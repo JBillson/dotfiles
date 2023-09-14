@@ -21,12 +21,12 @@ function kstart {komorebic start -a}
 function kstop {komorebic stop}
 
 # git
-function _gs {git status}
-function _gd {git diff}
-function _ga {git add .}
-function _gpl {git pull}
-function _gps {git push}
-function _gc {git commit}
+function _status {git status}
+function _diff {git diff}
+function _add {git add .}
+function _pull {git pull}
+function _push {git push}
+function _commit {git commit}
 
 # commands
 Set-Alias vim nvim
