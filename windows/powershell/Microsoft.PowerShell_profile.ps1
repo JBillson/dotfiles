@@ -1,3 +1,11 @@
+#------------------------------------------------------------------#
+# ENVIRONMENT VARIABLES
+
+# [Komorebi + WHKD]
+$Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
+$Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
+
+#------------------------------------------------------------------#
 # STYLING
 
 # [oh my posh] - init pwsh with oh-my-posh
@@ -16,10 +24,10 @@ function vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
 function dotfiles {Set-Location "$HOME\Documents\work\personal\dotfiles"}
 
 # komorebic
-function krestart {komorebic stop && komorebic start --config $HOME/.config/komorebi/komorebi.json --whkd }
-function kstart {komorebic start --config $HOME/.config/komorebi/komorebi.json --whkd }
-function kstop {komorebic stop}
-function kupdate {komorebic fetch-app-specific-configuration}
+function komorebic-start {komorebic start --config $HOME/.config/komorebi/komorebi.json --whkd}
+function komorebic-stop {komorebic stop}
+function komorebic-update {komorebic fetch-app-specific-configuration}
+function komorebic-restart {komorebic-stop && komorebic-start}
 
 # git
 function _status {git status}
@@ -53,13 +61,6 @@ Import-Module 'C:\Users\justi\.config\PowerShell\Modules\Terminal-Icons\0.10.0\T
 
 # [gsudo]
 Import-Module 'C:\Program Files\gsudo\Current\gsudoModule.psd1'
-
-#------------------------------------------------------------------#
-# ENVIRONMENT VARIABLES
-
-# [Komorebi + WHKD]
-$Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
-$Env:WHKD_CONFIG_HOME = "$HOME\.config"
 
 #------------------------------------------------------------------#
 # AUTO LAUNCH
