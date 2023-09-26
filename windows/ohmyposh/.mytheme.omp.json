@@ -86,55 +86,6 @@
           }
         },
         {
-          "type": "ytm",
-          "style": "powerline",
-          "powerline_symbol": "",
-          "invert_powerline": true,
-          "foreground": "#111111",
-          "background": "#83769c",
-          "template": "  {{ .Icon }}{{ if ne .Status \"stopped\" }}{{ .Artist }} - {{ .Track }}{{ end }} ",
-          "properties": {
-            "paused_icon": " ",
-            "playing_icon": " ",
-            "stopped_icon": " "
-          }
-        },
-        {
-          "type": "owm",
-          "style": "powerline",
-          "powerline_symbol": "",
-          "invert_powerline": true,
-          "foreground": "#ffffff",
-          "background": "#FF0000",
-          "template": " {{.Weather}} ({{.Temperature}}{{.UnitIcon}}) ",
-          "properties": {
-            "apikey": "6c3392066d14a703eaf8f269ae6001bf",
-            "location": "JOHANNESBURG,ZA",
-            "units": "metric",
-            "http_timeout": 20,
-            "cache_timeout": 10
-          }
-        },
-        {
-          "type": "battery",
-          "style": "powerline",
-          "powerline_symbol": "",
-          "invert_powerline": true,
-          "foreground": "#ffffff",
-          "background": "#f36943",
-          "background_templates": [
-            "{{if eq \"Charging\" .State.String}}#40c4ff{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#ff5722{{end}}",
-            "{{if eq \"Full\" .State.String}}#4caf50{{end}}"
-          ],
-          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }} ",
-          "properties": {
-            "charged_icon": " ",
-            "charging_icon": "<f></f> ",
-            "discharging_icon": "<f></f> "
-          }
-        },
-        {
           "type": "time",
           "style": "diamond",
           "invert_powerline": true,
@@ -144,7 +95,7 @@
           "trailing_diamond": "",
           "template": " {{ .CurrentDate | date .Format }} ",
           "properties": {
-            "time_format": "15:04 PM - Mon 02 Jan"
+            "time_format": "15:04 PM"
           }
         }
       ]
