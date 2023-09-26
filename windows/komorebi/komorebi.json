@@ -5,75 +5,58 @@
   "cross_monitor_move_behaviour": "Insert",
   "unmanaged_window_operation_behaviour": "Op",
   "mouse_follows_focus": true,
-  "border_width": 15,
+  "border_width": 5,
   "active_window_border": true,
   "active-window-border-colour": "#FFFFFF",
-  "default_workspace_padding": 30,
-  "default_container_padding": 30,
+  "default_workspace_padding": 20,
+  "default_container_padding": 20,
   "monitors": [
     {
       "workspaces": [
         {
           "name": "I",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "II",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "III",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "IV",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "V",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "VI",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "VII",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "VIII",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "IX",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         }
       ]
     },
@@ -83,64 +66,46 @@
           "name": "a",
           "layout": "BSP",
           "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
         },
         {
           "name": "b",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "c",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "d",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "e",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "f",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "g",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "h",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         },
         {
           "name": "i",
           "layout": "BSP",
-          "layout_rules": {},
-          "container_padding": 0,
-          "workspace_padding": 0
+          "layout_rules": {}
         }
       ]
     }
