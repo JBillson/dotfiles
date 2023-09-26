@@ -16,13 +16,6 @@ if (!(Test-Path -Path $gitconfig)){
   $changes = 'true'
 }
 
-$whkdrc = '~/.config/whkdrc'
-if (!(Test-Path -Path $whkdrc)){
-  echo "Creating whkdrc symlink"
-  sudo New-Item -ItemType SymbolicLink -Path $whkdrc -Target "${pwd}/komorebi/whkdrc" -ErrorAction SilentlyContinue
-  $changes = 'true'
-}
-
 $komorebi = '~/.config/komorebi/'
 if (!(Test-Path -Path $komorebi)){
   echo "Creating komorebi symlink"
