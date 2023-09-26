@@ -1,5 +1,5 @@
 $changes = ''
-#
+
 # create directories
 $configdir = '~/.config/'
 if (!(Test-Path -Path $configdir)){
@@ -52,13 +52,6 @@ $yasb = '~/.config/yasb'
 if (!(Test-Path -Path $yasb)){
   echo "Creating yasb symlink"
   sudo New-Item -ItemType SymbolicLink -Path "~/.config/yasb" -Target "${pwd}/yasb" -ErrorAction SilentlyContinue
-  $changes = 'true'
-}
-
-$nu = '~/AppData/Roaming/nushell/'
-if (!(Test-Path -Path $nu)){
-  echo "Creating nushell symlink"
-  sudo New-Item -ItemType SymbolicLink -Path "~/AppData/Roaming/nushell/" -Target "${pwd}/nushell" -ErrorAction SilentlyContinue
   $changes = 'true'
 }
 
