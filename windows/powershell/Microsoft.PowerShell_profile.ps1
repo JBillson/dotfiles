@@ -28,6 +28,7 @@ function _add {git add .}
 function _pull {git pull}
 function _push {git push}
 function _commit {git commit}
+function _log {git log}
 
 # commands
 Set-Alias vim nvim
