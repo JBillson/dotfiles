@@ -16,9 +16,10 @@ function vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
 function dotfiles {Set-Location "$HOME\Documents\work\personal\dotfiles"}
 
 # komorebic
-function krestart {komorebic stop && komorebic start -a}
-function kstart {komorebic start -a}
+function krestart {komorebic stop && komorebic start --config $HOME/.config/komorebi/komorebi.json --whkd }
+function kstart {komorebic start --config $HOME/.config/komorebi/komorebi.json --whkd }
 function kstop {komorebic stop}
+function kupdate {komorebic fetch-app-specific-configuration}
 
 # git
 function _status {git status}
@@ -63,14 +64,12 @@ $Env:WHKD_CONFIG_HOME = "$HOME\.config"
 # AUTO LAUNCH
 
 # [komorebi]
-$komorebi = Get-Process komorebi -ErrorAction SilentlyContinue
-if (!$komorebi){
-  komorebic start -a
+if (!(Get-Process komorebi -ErrorAction SilentlyContinue)){
+  komorebic start --config $HOME/.config/komorebi/komorebi.json --whkd
 }
 
 # [yasb]
-$yasb = Get-Process python -ErrorAction SilentlyContinue
-if (!$yasb){
+if (!(Get-Process python -ErrorAction SilentlyContinue)){
   Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python310/python.exe" -ArgumentList "$HOME/Documents/work/personal/yasb/src/main.py" -WindowStyle Hidden
 }
 
