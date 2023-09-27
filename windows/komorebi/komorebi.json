@@ -1,15 +1,37 @@
 {
   "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
-  "resize_delta": 50,
+  "resize_delta": 100,
   "window_container_behaviour": "Create",
   "cross_monitor_move_behaviour": "Insert",
   "unmanaged_window_operation_behaviour": "Op",
   "mouse_follows_focus": true,
+  "default_workspace_padding": 0,
+  "default_container_padding": 0,
+  "active_window_border": false,
   "border_width": 5,
-  "active_window_border": true,
-  "active-window-border-colour": "#FFFFFF",
-  "default_workspace_padding": 20,
-  "default_container_padding": 20,
+  "border_offset": {
+    "bottom": -5,
+    "left": -4,
+    "right": -8,
+    "top": -3 
+  },
+  "active_window_border_colours": {
+    "single": {
+      "r": 0,
+      "g": 0,
+      "b": 255
+    },
+    "monocle": {
+      "r": 255,
+      "g": 0,
+      "b": 0
+    },
+    "stack": {
+      "r": 0,
+      "g": 255,
+      "b": 0
+    }
+  },
   "monitors": [
     {
       "workspaces": [
