@@ -50,7 +50,7 @@ function cguid {$guid = New-Guid
 # MODULES
 
 # [terminal-icons]
-Import-Module 'C:\Users\justi\.config\PowerShell\Modules\Terminal-Icons\0.10.0\Terminal-Icons.psd1'
+Import-Module Terminal-Icons 
 
 # [gsudo]
 Import-Module 'C:\Program Files\gsudo\Current\gsudoModule.psd1'
