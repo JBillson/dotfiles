@@ -1,5 +1,5 @@
 {
-  "app_specific_configuration_path": "$HOME/Documents/work/personal/dotfiles/windows/komorebi/applications.yaml",
+  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
   "resize_delta": 50,
   "window_container_behaviour": "Create",
   "cross_monitor_move_behaviour": "Insert",
