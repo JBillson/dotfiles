@@ -1,11 +1,4 @@
 #------------------------------------------------------------------#
-# ENVIRONMENT VARIABLES
-
-# [Komorebi + WHKD]
-$Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
-$Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
-
-#------------------------------------------------------------------#
 # STYLING
 
 # [oh my posh] - init pwsh with oh-my-posh
@@ -24,7 +17,7 @@ function vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
 function dotfiles {Set-Location "$HOME\Documents\work\personal\dotfiles"}
 
 # komorebic
-function komorebic-start {komorebic start --config $HOME/.config/komorebi/komorebi.json --whkd}
+function komorebic-start {komorebic start --config "$HOME/.config/komorebi/komorebi.json" --whkd}
 function komorebic-stop {komorebic stop}
 function komorebic-update {komorebic fetch-app-specific-configuration}
 function komorebic-restart {komorebic-stop && komorebic-start}
@@ -67,12 +60,19 @@ Import-Module 'C:\Program Files\gsudo\Current\gsudoModule.psd1'
 
 # [komorebi]
 if (!(Get-Process komorebi -ErrorAction SilentlyContinue)){
-  komorebic start --config $HOME/.config/komorebi/komorebi.json --whkd
+  komorebic start --config "$HOME/.config/komorebi/komorebi.json" --whkd
 }
 
 # [yasb]
 if (!(Get-Process python -ErrorAction SilentlyContinue)){
   Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python310/python.exe" -ArgumentList "$HOME/Documents/work/personal/yasb/src/main.py" -WindowStyle Hidden
 }
+
+#------------------------------------------------------------------#
+# ENVIRONMENT VARIABLES
+
+# [Komorebi + WHKD]
+$Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
+$Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
 
 #------------------------------------------------------------------#
