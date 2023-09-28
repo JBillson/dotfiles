@@ -22,6 +22,10 @@ function komorebic-stop {komorebic stop}
 function komorebic-update {komorebic fetch-app-specific-configuration}
 function komorebic-restart {komorebic-stop && komorebic-start}
 
+# yasb
+function yasb-stop { Stop-Process -Name yasb }
+function yasb-start { C:/'Program Files'/yasb/yasb.exe }
+
 # git
 function _status {git status}
 function _diff {git diff}
@@ -61,11 +65,6 @@ Import-Module 'C:\Program Files\gsudo\Current\gsudoModule.psd1'
 # [komorebi]
 if (!(Get-Process komorebi -ErrorAction SilentlyContinue)){
   komorebic start --config "$HOME/.config/komorebi/komorebi.json" --whkd
-}
-
-# [yasb]
-if (!(Get-Process python -ErrorAction SilentlyContinue)){
-  Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python310/python.exe" -ArgumentList "$HOME/Documents/work/personal/yasb/src/main.py" -WindowStyle Hidden
 }
 
 #------------------------------------------------------------------#
