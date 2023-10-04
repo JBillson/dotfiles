@@ -5,8 +5,8 @@
   "cross_monitor_move_behaviour": "Insert",
   "unmanaged_window_operation_behaviour": "Op",
   "mouse_follows_focus": true,
-  "default_workspace_padding": 0,
-  "default_container_padding": 0,
+  "default_workspace_padding": 5,
+  "default_container_padding": 5,
   "active_window_border": false,
   "border_width": 5,
   "border_offset": {
@@ -36,98 +36,80 @@
     {
       "workspaces": [
         {
-          "name": "I",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "a",
+          "layout": "BSP"
         },
         {
-          "name": "II",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "b",
+          "layout": "BSP"
         },
         {
-          "name": "III",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "c",
+          "layout": "BSP"
         },
         {
-          "name": "IV",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "d",
+          "layout": "BSP"
         },
         {
-          "name": "V",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "e",
+          "layout": "BSP"
         },
         {
-          "name": "VI",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "f",
+          "layout": "BSP"
         },
         {
-          "name": "VII",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "g",
+          "layout": "BSP"
         },
         {
-          "name": "VIII",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "h",
+          "layout": "BSP"
         },
         {
-          "name": "IX",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "i",
+          "layout": "BSP"
         }
       ]
     },
     {
       "workspaces": [
         {
-          "name": "a",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "I",
+          "layout": "BSP"
         },
         {
-          "name": "b",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "II",
+          "layout": "BSP"
         },
         {
-          "name": "c",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "III",
+          "layout": "BSP"
         },
         {
-          "name": "d",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "IV",
+          "layout": "BSP"
         },
         {
-          "name": "e",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "V",
+          "layout": "BSP"
         },
         {
-          "name": "f",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "VI",
+          "layout": "BSP"
         },
         {
-          "name": "g",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "VII",
+          "layout": "BSP"
         },
         {
-          "name": "h",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "VIII",
+          "layout": "BSP"
         },
         {
-          "name": "i",
-          "layout": "BSP",
-          "layout_rules": {}
+          "name": "IX",
+          "layout": "BSP"
         }
       ]
     }
