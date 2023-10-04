@@ -34,7 +34,7 @@ widgets:
       height: 350
     callbacks:
       on_left: "calendar"
-      on_right: null 
+      on_right: null
   
   komorebi_workspaces:
     kind: KomorebiWorkspaceWidget
@@ -71,7 +71,7 @@ widgets:
 
   mem_usage_widget:
     kind: SysInfoWidget
-    label: "${matIcon('storage')} ${percent(sys_info.mem.mem_used, sys_info.mem.mem_total)}"
+    label: "${matIcon('memory')} ${percent(sys_info.mem.mem_used, sys_info.mem.mem_total)}"
     interval: 1000
 
   net_usage_widget:
