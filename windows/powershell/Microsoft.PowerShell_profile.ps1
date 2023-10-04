@@ -5,6 +5,13 @@
 oh-my-posh init pwsh --config "$HOME/.config/ohmyposh/.mytheme.omp.json" | Invoke-Expression
 
 #------------------------------------------------------------------#
+# ENVIRONMENT VARIABLES
+
+# [Komorebi + WHKD]
+$Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
+$Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
+
+#------------------------------------------------------------------#
 # ALIASES
 
 # paths
@@ -25,6 +32,10 @@ function komorebic-restart {komorebic-stop && komorebic-start}
 # yasb
 function yasb-stop { Stop-Process -Name yasb }
 function yasb-start { C:/'Program Files'/yasb/yasb.exe }
+function yasb-restart { yasb-stop && yasb-start}
+
+# AMY
+function amy { komorebic-stop && yasb-stop }
 
 # git
 function _status {git status}
@@ -62,16 +73,15 @@ Import-Module 'C:\Program Files\gsudo\Current\gsudoModule.psd1'
 #------------------------------------------------------------------#
 # AUTO LAUNCH
 
+# [yasb]
+if (!(Get-Process yasb -ErrorAction SilentlyContinue)){
+    yasb-start -ErrorAction SilentlyContinue
+}
+
 # [komorebi]
 if (!(Get-Process komorebi -ErrorAction SilentlyContinue)){
   komorebic start --config "$HOME/.config/komorebi/komorebi.json" --whkd
 }
 
-#------------------------------------------------------------------#
-# ENVIRONMENT VARIABLES
-
-# [Komorebi + WHKD]
-$Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
-$Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
 
 #------------------------------------------------------------------#
