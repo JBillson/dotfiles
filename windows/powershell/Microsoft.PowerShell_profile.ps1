@@ -41,8 +41,8 @@ function amy { komorebic-stop && yasb-stop }
 function gs {git status}
 function gd {git diff}
 function ga {git add .}
-function gpl {git pull}
-function gps {git push}
+function pull {git pull}
+function push {git push}
 function gc {git commit}
 function gl {git log}
 
