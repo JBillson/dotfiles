@@ -38,13 +38,13 @@ function yasb-restart { yasb-stop && yasb-start}
 function amy { komorebic-stop && yasb-stop }
 
 # git
-function _status {git status}
-function _diff {git diff}
-function _add {git add .}
-function _pull {git pull}
-function _push {git push}
-function _commit {git commit}
-function _log {git log}
+function gs {git status}
+function gd {git diff}
+function ga {git add .}
+function gpl {git pull}
+function gps {git push}
+function gc {git commit}
+function gl {git log}
 
 # commands
 Set-Alias vim nvim
@@ -53,6 +53,7 @@ Set-Alias shutdown Stop-Computer
 
 # other
 function ex {explorer .}
+function la {ls -Hidden}
 
 #------------------------------------------------------------------#
 # CUSTOM FUNCTIONS
