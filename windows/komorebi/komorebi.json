@@ -7,8 +7,8 @@
   "mouse_follows_focus": true,
   "default_workspace_padding": 5,
   "default_container_padding": 5,
-  "active_window_border": false,
-  "border_width": 5,
+  "active_window_border": true,
+  "border_width": 8,
   "border_offset": {
     "bottom": -5,
     "left": -4,
