@@ -86,6 +86,13 @@
     id: Bitwarden.exe
   options:
   - tray_and_multi_window
+- name: Blitz
+  identifier:
+    kind: Exe
+    id: Blitz.exe
+  options:
+  - border_overflow
+  - tray_and_multi_window
 - name: Bloxstrap
   identifier:
     kind: Exe
@@ -106,6 +113,15 @@
   float_identifiers:
   - kind: Title
     id: Calculator
+- name: Citrix Receiver
+  identifier:
+    kind: Exe
+    id: SelfService.exe
+  options:
+  - tray_and_multi_window
+  float_identifiers:
+  - kind: Exe
+    id: SelfService.exe
 - name: Clash Verge
   identifier:
     kind: Exe
@@ -431,6 +447,13 @@
   options:
   - border_overflow
   - tray_and_multi_window
+- name: Mattermost
+  identifier:
+    kind: Exe
+    id: Mattermost.exe
+  options:
+  - border_overflow
+  - tray_and_multi_window
 - name: Mica For Everyone
   identifier:
     kind: Exe
@@ -477,6 +500,12 @@
     id: _WwB
     comment: Targets a hidden window spawned by Microsoft Office applications
 - name: Microsoft Teams
+  identifier:
+    kind: Class
+    id: TeamsWebView
+  options:
+  - tray_and_multi_window
+- name: Microsoft Teams classic
   identifier:
     kind: Exe
     id: Teams.exe
@@ -717,6 +746,9 @@
   - kind: Class
     id: SunAwtDialog
     comment: Targets JetBrains IDE popups and floating windows
+  - kind: Title
+    id: PopupMessageWindow
+    comment: Targets JetBrains IDE popups
 - name: Roblox FPS Unlocker
   identifier:
     kind: Exe
