@@ -30,7 +30,7 @@ function komorebic-update {komorebic fetch-app-specific-configuration}
 function komorebic-restart {komorebic-stop && komorebic-start}
 
 # yasb
-function yasb-stop { Stop-Process -Name yasb }
+function yasb-stop { Stop-Process -Name yasb -ErrorAction SilentlyContinue }
 function yasb-start { C:/'Program Files'/yasb/yasb.exe }
 function yasb-restart { yasb-stop && yasb-start}
 
