@@ -32,6 +32,8 @@
       "b": 0
     }
   },
+  "alt_focus_hack": true,
+  "window_hiding_behaviour": "Cloak",
   "monitors": [
     {
       "workspaces": [
@@ -114,6 +116,9 @@
       ]
     }
   ],
-  "alt_focus_hack": true,
-  "window_hiding_behaviour": "Cloak"
+  "float_rules": [
+    {"id": "Counter-Strike 2",
+     "kind": "Title"
+    }
+  ]
 }
