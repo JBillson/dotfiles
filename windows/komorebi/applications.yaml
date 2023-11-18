@@ -28,6 +28,12 @@
     id: Photoshop
   options:
   - border_overflow
+- name: EA Desktop Client
+  identifier:
+    kind: Exe
+    id: 'EADesktop.exe'
+  options:
+  - border_overflow
 - name: Affinity Photo 2
   identifier:
     kind: Title
@@ -214,6 +220,12 @@
   float_identifiers:
   - kind: Exe
     id: Dropbox.exe
+- name: Eagle
+  identifier:
+    kind: Exe
+    id: Eagle.exe
+  options:
+  - tray_and_multi_window
 - name: ElectronMail
   identifier:
     kind: Exe
@@ -279,6 +291,12 @@
     id: EVERYTHING_(1.5a)
   options:
   - force
+  - tray_and_multi_window
+- name: FFMetrics
+  identifier:
+    kind: Exe
+    id: FFMetrics.exe
+  options:
   - tray_and_multi_window
 - name: Figma
   identifier:
@@ -368,6 +386,12 @@
     id: itch.exe
   options:
   - border_overflow
+  - tray_and_multi_window
+- name: KOOK
+  identifier:
+    kind: Exe
+    id: KOOK.exe
+  options:
   - tray_and_multi_window
 - name: Keyviz
   identifier:
@@ -637,6 +661,12 @@
   float_identifiers:
   - kind: Exe
     id: Paradox Launcher.exe
+- name: Passware Kit Forensic
+  identifier:
+    kind: Exe
+    id: PasswareKitForensic.exe
+  options:
+  - border_overflow
 - name: Playnite
   identifier:
     kind: Exe
@@ -845,6 +875,13 @@
   - kind: Class
     id: obj_Form
     comment: Target installer
+- name: SnippingTool
+  identifier:
+    kind: Exe
+    id: SnippingTool.exe
+  float_identifiers:
+  - kind: Exe
+    id: SnippingTool.exe
 - name: SoulseekQt
   identifier:
     kind: Exe
@@ -946,6 +983,7 @@
     id: Unity Hub.exe
   options:
   - tray_and_multi_window
+  - border_overflow
 - name: Unreal Editor
   identifier:
     kind: Exe

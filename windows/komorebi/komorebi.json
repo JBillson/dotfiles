@@ -117,8 +117,9 @@
     }
   ],
   "float_rules": [
-    {"id": "Counter-Strike 2",
-     "kind": "Title"
+    {
+      "id": "Counter-Strike 2",
+      "kind": "Title"
     }
   ]
 }
