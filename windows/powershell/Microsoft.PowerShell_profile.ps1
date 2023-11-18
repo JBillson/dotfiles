@@ -15,13 +15,13 @@ $Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
 # ALIASES
 
 # paths
-function personal {Set-Location "$HOME\Documents\work\personal\"}
-function eden {Set-Location "$HOME\Documents\work\eden\"}
-function experiences {Set-Location "C:\Eden"}
-function startup {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
-function nvimConfig {Set-Location "$HOME\AppData\Local\nvim"}
-function vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
-function dotfiles {Set-Location "$HOME\Documents\work\personal\dotfiles"}
+function go-personal {Set-Location "$HOME\Documents\work\personal\"}
+function go-eden {Set-Location "$HOME\Documents\work\eden\"}
+function go-experiences {Set-Location "C:\Eden"}
+function go-startup {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
+function go-nvimConfig {Set-Location "$HOME\AppData\Local\nvim"}
+function go-vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
+function go-dotfiles {Set-Location "$HOME\Documents\work\personal\dotfiles"}
 
 # komorebic
 function komorebic-start {komorebic start --config "$HOME/.config/komorebi/komorebi.json" --whkd}
