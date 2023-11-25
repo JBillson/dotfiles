@@ -55,7 +55,7 @@ Set-Alias shutdown Stop-Computer
 function ex {explorer .}
 function la {ls -Hidden}
 
-# ls as natural sorting
+# ls with natural sorting
 # https://stackoverflow.com/questions/5427506/how-to-sort-by-file-name-the-same-way-windows-explorer-does#:~:text=To%20be%20able%20to%20sort,natural%20sorting%20for%20Windows%20Explorer.
 Set-Alias -Name ls -Value ordered-list
 function ordered-list {Get-ChildItem | Sort-Object { [regex]::Replace($_.Name, '\d+', { $args[0].Value.PadLeft(20) }) }}
