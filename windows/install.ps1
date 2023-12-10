@@ -1,5 +1,5 @@
 $changes = ''
-#
+
 # create directories
 $configdir = '~/.config/'
 if (!(Test-Path -Path $configdir)){
@@ -13,13 +13,6 @@ $gitconfig = '~/.gitconfig'
 if (!(Test-Path -Path $gitconfig)){
   echo "Creating .gitconfig symlink"
   sudo New-Item -ItemType SymbolicLink -Path $gitconfig -Target "${pwd}/git/.gitconfig" -ErrorAction SilentlyContinue
-  $changes = 'true'
-}
-
-$whkdrc = '~/.config/whkdrc'
-if (!(Test-Path -Path $whkdrc)){
-  echo "Creating whkdrc symlink"
-  sudo New-Item -ItemType SymbolicLink -Path $whkdrc -Target "${pwd}/komorebi/whkdrc" -ErrorAction SilentlyContinue
   $changes = 'true'
 }
 
@@ -59,13 +52,6 @@ $yasb = '~/.config/yasb'
 if (!(Test-Path -Path $yasb)){
   echo "Creating yasb symlink"
   sudo New-Item -ItemType SymbolicLink -Path "~/.config/yasb" -Target "${pwd}/yasb" -ErrorAction SilentlyContinue
-  $changes = 'true'
-}
-
-$nu = '~/AppData/Roaming/nushell/'
-if (!(Test-Path -Path $nu)){
-  echo "Creating nushell symlink"
-  sudo New-Item -ItemType SymbolicLink -Path "~/AppData/Roaming/nushell/" -Target "${pwd}/nushell" -ErrorAction SilentlyContinue
   $changes = 'true'
 }
 

@@ -1,0 +1,125 @@
+{
+  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
+  "resize_delta": 100,
+  "window_container_behaviour": "Create",
+  "cross_monitor_move_behaviour": "Insert",
+  "unmanaged_window_operation_behaviour": "Op",
+  "mouse_follows_focus": true,
+  "default_workspace_padding": 15,
+  "default_container_padding": 15,
+  "active_window_border": true,
+  "border_width": 8,
+  "border_offset": {
+    "bottom": -5,
+    "left": -4,
+    "right": -8,
+    "top": -3 
+  },
+  "active_window_border_colours": {
+    "single": {
+      "r": 0,
+      "g": 0,
+      "b": 255
+    },
+    "monocle": {
+      "r": 255,
+      "g": 0,
+      "b": 0
+    },
+    "stack": {
+      "r": 0,
+      "g": 255,
+      "b": 0
+    }
+  },
+  "alt_focus_hack": true,
+  "window_hiding_behaviour": "Cloak",
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "a",
+          "layout": "BSP"
+        },
+        {
+          "name": "b",
+          "layout": "BSP"
+        },
+        {
+          "name": "c",
+          "layout": "BSP"
+        },
+        {
+          "name": "d",
+          "layout": "BSP"
+        },
+        {
+          "name": "e",
+          "layout": "BSP"
+        },
+        {
+          "name": "f",
+          "layout": "BSP"
+        },
+        {
+          "name": "g",
+          "layout": "BSP"
+        },
+        {
+          "name": "h",
+          "layout": "BSP"
+        },
+        {
+          "name": "i",
+          "layout": "BSP"
+        }
+      ]
+    },
+    {
+      "workspaces": [
+        {
+          "name": "I",
+          "layout": "BSP"
+        },
+        {
+          "name": "II",
+          "layout": "BSP"
+        },
+        {
+          "name": "III",
+          "layout": "BSP"
+        },
+        {
+          "name": "IV",
+          "layout": "BSP"
+        },
+        {
+          "name": "V",
+          "layout": "BSP"
+        },
+        {
+          "name": "VI",
+          "layout": "BSP"
+        },
+        {
+          "name": "VII",
+          "layout": "BSP"
+        },
+        {
+          "name": "VIII",
+          "layout": "BSP"
+        },
+        {
+          "name": "IX",
+          "layout": "BSP"
+        }
+      ]
+    }
+  ],
+  "float_rules": [
+    {
+      "id": "Counter-Strike 2",
+      "kind": "Title"
+    }
+  ]
+}

@@ -81,3 +81,4 @@ alt + Numpad5          : komorebic change-layout ultrawide-vertical-stack
 # Layout manipulation
 alt + x                 : komorebic flip-layout horizontal
 alt + y                 : komorebic flip-layout vertical
+

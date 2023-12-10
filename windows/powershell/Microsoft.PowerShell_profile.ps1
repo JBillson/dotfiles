@@ -1,37 +1,64 @@
+#------------------------------------------------------------------#
 # STYLING
 
 # [oh my posh] - init pwsh with oh-my-posh
 oh-my-posh init pwsh --config "$HOME/.config/ohmyposh/.mytheme.omp.json" | Invoke-Expression
 
 #------------------------------------------------------------------#
+# ENVIRONMENT VARIABLES
+
+# [Komorebi + WHKD]
+$Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
+$Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
+
+#------------------------------------------------------------------#
 # ALIASES
 
 # paths
-function personal {Set-Location "$HOME\Documents\personal\"}
-function eden {Set-Location "$HOME\Documents\eden\"}
-function experiences {Set-Location "C:\Eden"}
-function startup {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
-function nvimConfig {Set-Location "$HOME\AppData\Local\nvim"}
-function vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
-function dotfiles {Set-Location "$HOME\Documents\personal\dotfiles"}
+function go-personal {Set-Location "$HOME\Documents\work\personal\"}
+function go-eden {Set-Location "$HOME\Documents\work\eden\"}
+function go-experiences {Set-Location "C:\Eden"}
+function go-startup {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
+function go-nvimConfig {Set-Location "$HOME\AppData\Local\nvim"}
+function go-vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
+function go-dotfiles {Set-Location "$HOME\Documents\work\personal\dotfiles"}
 
 # komorebic
-function krestart {komorebic stop && komorebic start -a}
-function kstart {komorebic start -a}
-function kstop {komorebic stop}
+function komorebic-start {komorebic start --config "$HOME/.config/komorebi/komorebi.json" --whkd}
+function komorebic-stop {komorebic stop}
+function komorebic-update {komorebic fetch-app-specific-configuration}
+function komorebic-restart {komorebic-stop && komorebic-start}
+
+# yasb
+function yasb-stop { Stop-Process -Name yasb -ErrorAction SilentlyContinue }
+function yasb-start { C:/'Program Files'/yasb/yasb.exe }
+function yasb-restart { yasb-stop && yasb-start}
+
+# AMY
+function amy { komorebic-stop && yasb-stop }
 
 # git
-function _gs {git status}
-function _gd {git diff}
-function _ga {git add .}
-function _gpl {git pull}
-function _gps {git push}
-function _gc {git commit}
+function gs {git status}
+function gd {git diff}
+function ga {git add .}
+function pull {git pull}
+function push {git push}
+function gc {git commit}
+function gl {git log}
 
 # commands
 Set-Alias vim nvim
 Set-Alias reboot Restart-Computer
 Set-Alias shutdown Stop-Computer
+
+# other
+function ex {explorer .}
+function la {ls -Hidden}
+
+# ls with natural sorting
+# https://stackoverflow.com/questions/5427506/how-to-sort-by-file-name-the-same-way-windows-explorer-does#:~:text=To%20be%20able%20to%20sort,natural%20sorting%20for%20Windows%20Explorer.
+Set-Alias -Name ls -Value ordered-list
+function ordered-list {Get-ChildItem | Sort-Object { [regex]::Replace($_.Name, '\d+', { $args[0].Value.PadLeft(20) }) }}
 
 #------------------------------------------------------------------#
 # CUSTOM FUNCTIONS
@@ -44,31 +71,31 @@ function cguid {$guid = New-Guid
 # MODULES
 
 # [terminal-icons]
-Import-Module 'C:\Users\justi\.config\PowerShell\Modules\Terminal-Icons\0.10.0\Terminal-Icons.psd1'
+Import-Module Terminal-Icons 
 
 # [gsudo]
 Import-Module 'C:\Program Files\gsudo\Current\gsudoModule.psd1'
 
 #------------------------------------------------------------------#
-# ENVIRONMENT VARIABLES
-
-# [Komorebi + WHKD]
-$Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
-$Env:WHKD_CONFIG_HOME = "$HOME\.config"
-
-#------------------------------------------------------------------#
 # AUTO LAUNCH
 
-# [komorebi]
-$komorebi = Get-Process komorebi -ErrorAction SilentlyContinue
-if (!$komorebi){
-  komorebic start -a
+# [yasb]
+if (!(Get-Process yasb -ErrorAction SilentlyContinue)){
+    yasb-start -ErrorAction SilentlyContinue
 }
 
-# [yasb]
-$yasb = Get-Process python -ErrorAction SilentlyContinue
-if (!$yasb){
-  Start-Process -FilePath "$HOME/AppData/Local/Programs/Python/Python311/python.exe" -ArgumentList "$HOME/Documents/personal/yasb/src/main.py" -WindowStyle Hidden
+# [komorebi]
+if (!(Get-Process komorebi -ErrorAction SilentlyContinue)){
+  komorebic start --config "$HOME/.config/komorebi/komorebi.json" --whkd
 }
 
 #------------------------------------------------------------------#
+# OTHER
+
+# PowerShell parameter completion shim for the dotnet CLI
+Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
+    param($wordToComplete, $commandAst, $cursorPosition)
+        dotnet complete --position $cursorPosition "$commandAst" | ForEach-Object {
+            [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
+        }
+}
