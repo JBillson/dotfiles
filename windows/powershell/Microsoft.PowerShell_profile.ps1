@@ -80,9 +80,9 @@ Import-Module 'C:\Program Files\gsudo\Current\gsudoModule.psd1'
 # AUTO LAUNCH
 
 # [yasb]
-if (!(Get-Process yasb -ErrorAction SilentlyContinue)){
-    yasb-start -ErrorAction SilentlyContinue
-}
+#if (!(Get-Process yasb -ErrorAction SilentlyContinue)){
+#    yasb-start -ErrorAction SilentlyContinue
+#}
 
 # [komorebi]
 if (!(Get-Process komorebi -ErrorAction SilentlyContinue)){
