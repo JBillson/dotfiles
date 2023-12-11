@@ -62,9 +62,3 @@ foreach ($app in $uninstall){
     winget uninstall $app
 }
 Write-Output "-------------------------------------------------------" 
-
-
-Write-Output "Restarting Shell"
-pwsh
-Write-Output "OhMyPosh: Installing Font Dependency" 
-oh-my-posh font install JetBrainsMono

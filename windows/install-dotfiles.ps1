@@ -1,6 +1,5 @@
 New-ItemProperty 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders' Personal -Value 'C:\Users\justi\.config' -Type ExpandString -Force
 
-
 $changes = ''
 
 # create directories
@@ -38,6 +37,8 @@ if (!(Test-Path -Path $ohmyposh)){
   echo "Creating oh-my-posh symlink"
   sudo New-Item -ItemType SymbolicLink -Path $ohmyposh -Target "${pwd}/ohmyposh" -ErrorAction SilentlyContinue
   $changes = 'true'
+  Write-Output "[OhMyPosh] Installing Font Dependency" 
+  oh-my-posh font install JetBrainsMono
 }
 
 $pwsh = '~/.config/PowerShell/'
