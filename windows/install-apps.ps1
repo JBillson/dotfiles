@@ -27,7 +27,8 @@ $install=
 "Stremio.Stremio",
 "LGUG2Z.whkd",
 "LGUG2Z.komorebi",
-"BurntSushi.ripgrep.MSVC"
+"BurntSushi.ripgrep.MSVC",
+"sharkdp.fd"
 
 $uninstall =
 "Microsoft.OneDrive",
