@@ -26,7 +26,8 @@ $install=
 "EpicGames.EpicGamesLauncher",
 "Stremio.Stremio",
 "LGUG2Z.whkd",
-"LGUG2Z.komorebi"
+"LGUG2Z.komorebi",
+"BurntSushi.ripgrep.MSVC"
 
 $uninstall =
 "Microsoft.OneDrive",
