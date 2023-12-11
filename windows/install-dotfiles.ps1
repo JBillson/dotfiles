@@ -1,3 +1,6 @@
+New-ItemProperty 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders' Personal -Value 'C:\Users\justi\.config' -Type ExpandString -Force
+
+
 $changes = ''
 
 # create directories
@@ -46,7 +49,7 @@ if (!(Test-Path -Path $pwsh)){
 
 # Force Windows Terminal SymLink - this file will always exist if you have used the terminal before
 $WindowsTerminal = '~/AppData/Local/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json'
-sudo New-Item -ItemType SymbolicLink  $WindowsTerminal -Target "${pwd}/windows-terminal/settings.json" -ErrorAction SilentlyContinue
+sudo New-Item -ItemType SymbolicLink  $WindowsTerminal -Target "${pwd}/windows-terminal/settings.json" -ErrorAction SilentlyContinue -Force
 
 $yasb = '~/.config/yasb'
 if (!(Test-Path -Path $yasb)){
@@ -58,3 +61,4 @@ if (!(Test-Path -Path $yasb)){
 if (!$changes){
   echo "No changes made, you're all setup already!"
 }
+
