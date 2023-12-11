@@ -53,11 +53,6 @@ foreach ($app in $install){
         Write-Output "Komorebi: Enabling Long Path Support" 
         Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
     }
-
-    if ($app -eq "JanDeDobbeleer.OhMyPosh"){
-        Write-Output "OhMyPosh: Installing Font Dependency" 
-	oh-my-posh font install JetBrainsMono
-    }
 }
 Write-Output "-------------------------------------------------------" 
 
@@ -68,3 +63,8 @@ foreach ($app in $uninstall){
 }
 Write-Output "-------------------------------------------------------" 
 
+
+Write-Output "Restarting Shell"
+pwsh
+Write-Output "OhMyPosh: Installing Font Dependency" 
+oh-my-posh font install JetBrainsMono
