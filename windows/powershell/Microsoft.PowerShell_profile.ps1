@@ -31,7 +31,7 @@ function komorebic-restart {komorebic-stop && komorebic-start}
 
 # yasb
 function yasb-stop { Stop-Process -Name yasb -ErrorAction SilentlyContinue }
-function yasb-start { C:/'Program Files'/yasb/yasb.exe }
+function yasb-start { C:/'Program Files'/yasb/yasb.exe -c "$HOME/.config/yasb/config.yaml" -s "$HOME/.config/yasb/styles.css" }
 function yasb-restart { yasb-stop && yasb-start}
 
 # AMY
