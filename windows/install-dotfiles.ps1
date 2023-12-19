@@ -32,6 +32,13 @@ if (!(Test-Path -Path $nvim)){
   $changes = 'true'
 }
 
+$rider = '~/.ideavimrc'
+if (!(Test-Path -Path $rider)){
+  echo "Creating rider .ideavimrc symlink"
+  sudo New-Item -ItemType SymbolicLink -Path $rider -Target "${pwd}/rider/.ideavimrc" -ErrorAction SilentlyContinue
+  $changes = 'true'
+}
+
 $ohmyposh = '~/.config/ohmyposh/'
 if (!(Test-Path -Path $ohmyposh)){
   echo "Creating oh-my-posh symlink"

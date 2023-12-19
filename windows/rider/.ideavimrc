@@ -1,0 +1,78 @@
+" ---- PLUGINS ----
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+
+" NERDTree plugin
+Plug 'preservim/nerdtree'
+
+" ------------------
+
+" ---- SETTINGS ----
+
+" auto indent
+set autoindent
+
+" relative numbers
+set relativenumber
+set number
+
+" Do incremental searching.
+set incsearch
+
+" minimum lines to leave visible when scrolling
+set scrolloff=10
+
+" ------------------
+
+" ---- CUSTOM MAPPINGS ----
+" leader key
+let mapleader = "\<Space>"
+
+" source ~/.ideavimrc
+nnoremap <leader>si :source ~/.ideavimrc<CR>
+
+" toggle file explorer
+map <C-f> :NERDTreeToggle<CR>
+
+" navigate tabs
+map <C-n> :tabnext<CR>
+map <C-p> :tabprevious<CR>
+
+" close tab
+map <leader>q :close<CR>
+
+" close all panes except current
+map <leader>Q <Action>(CloseAllEditorsButActive)
+
+" vertical split
+map <leader>sv :vsplit<CR>
+
+" horizontal split
+map <leader>sh :split<CR>
+
+map <C-S-l> <Action>(MoveTabRight)
+
+" yank to system clipboard
+map <leader>y "+y
+
+" paste from system clipboard
+map <leader>p "+p
+
+" navigate panes
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+map <C-k> <C-w>k
+map <C-j> <C-w>j
+
+" reformat code
+map <leader>f <Action>(ReformatCode)
+
+" save file
+map <leader>ss :w<CR>
+
+" toggle breakpoint on current line
+map <leader>b <Action>(ToggleLineBreakpoint)
+" ------------------------
