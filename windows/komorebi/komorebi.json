@@ -120,6 +120,10 @@
     {
       "id": "Counter-Strike 2",
       "kind": "Title"
+    },
+    {
+      "id": "Sideloader.exe",
+      "kind": "Exe"
     }
   ]
 }
