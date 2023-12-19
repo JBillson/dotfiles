@@ -8,7 +8,7 @@
   "default_workspace_padding": 15,
   "default_container_padding": 15,
   "active_window_border": true,
-  "border_width": 8,
+  "border_width": 4,
   "border_offset": {
     "bottom": -5,
     "left": -4,
@@ -39,39 +39,39 @@
       "workspaces": [
         {
           "name": "a",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "b",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "c",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "d",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "e",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "f",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "g",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "h",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "i",
-          "layout": "BSP"
+          "layout": "Columns"
         }
       ]
     },
@@ -79,39 +79,39 @@
       "workspaces": [
         {
           "name": "I",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "II",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "III",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "IV",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "V",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "VI",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "VII",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "VIII",
-          "layout": "BSP"
+          "layout": "Columns"
         },
         {
           "name": "IX",
-          "layout": "BSP"
+          "layout": "Columns"
         }
       ]
     }
