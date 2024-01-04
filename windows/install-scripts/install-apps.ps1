@@ -20,12 +20,12 @@ Write-Output "-------------------------------------------------------"
 Write-Output "-------------Installing WinGet Apps--------------------" 
 foreach ($app in $winget){
     if ($app -eq "LGUG2Z.komorebi"){
-        Write-Output "Komorebi: Enabling Long Path Support"
+        Write-Output "[Komorebi] Enabling Long Path Support"
         Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
     }
 
     Write-Output "Installing $app from WinGet"
-    winget install $app -h --no-upgrade
+    winget install $app -h --no-upgrade --accept-package-agreements --accept-source-agreements
 }
 Write-Output "-------------------------------------------------------" 
 
