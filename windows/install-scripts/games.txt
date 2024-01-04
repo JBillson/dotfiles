@@ -1,0 +1,5 @@
+Valve.Steam
+Blitz.Blitz
+RiotGames.LeagueOfLegends.EUW
+ElectronicArts.EADesktop
+EpicGames.EpicGamesLauncher

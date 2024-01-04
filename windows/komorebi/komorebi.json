@@ -124,6 +124,10 @@
     {
       "id": "Sideloader.exe",
       "kind": "Exe"
+    },
+    {
+      "id": "PowerToys.PowerLauncher.exe",
+      "kind": "Exe"
     }
   ]
 }

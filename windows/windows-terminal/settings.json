@@ -6,22 +6,6 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "right"
-            },
-            "keys": "ctrl+alt+shift+v"
-        },
-        {
-            "command": 
-            {
-                "action": "moveFocus",
-                "direction": "down"
-            },
-            "keys": "ctrl+j"
-        },
-        {
-            "command": 
-            {
                 "action": "copy",
                 "singleLine": false
             },
@@ -54,6 +38,14 @@
         {
             "command": 
             {
+                "action": "splitPane",
+                "split": "right"
+            },
+            "keys": "ctrl+alt+shift+v"
+        },
+        {
+            "command": 
+            {
                 "action": "sendInput",
                 "input": "clear\r"
             },
@@ -82,6 +74,14 @@
                 "direction": "left"
             },
             "keys": "ctrl+shift+h"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "ctrl+j"
         },
         {
             "command": 

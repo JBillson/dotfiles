@@ -12,18 +12,17 @@ Plug 'preservim/nerdtree'
 
 " ---- SETTINGS ----
 
-" auto indent
 set autoindent
-
-" relative numbers
 set relativenumber
 set number
-
-" Do incremental searching.
 set incsearch
-
-" minimum lines to leave visible when scrolling
 set scrolloff=10
+set visualbell
+set noerrorbells
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 " ------------------
 
@@ -37,35 +36,28 @@ nnoremap <leader>so :source ~/.ideavimrc<CR>
 " toggle file explorer
 map <C-f> :NERDTreeToggle<CR>
 
-" navigate tabs
+" tab manipulation
 map <C-n> :tabnext<CR>
 map <C-p> :tabprevious<CR>
+map <C-q> :close<CR>
+map <C-S-q> <Action>(CloseAllEditorsButActive)
 
-" close tab
-map <leader>q :close<CR>
-
-" close all tabs except current in the current split 
-map <leader>Q <Action>(CloseAllEditorsButActive)
-
-" vertical split
+" split manipulation
 map <leader>V :vsplit<CR>
-
-" horizontal split
 map <leader>H :split<CR>
-
-map <C-S-l> <Action>(MoveTabRight)
-
-" yank to system clipboard
-map <leader>y "+y
-
-" paste from system clipboard
-map <leader>p "+p
-
-" navigate panes
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 map <C-k> <C-w>k
 map <C-j> <C-w>j
+
+map <C-S-l> <Action>(MoveTabRight)
+
+" system clipboard
+map <leader>y "+y
+map <leader>p "+p
+
+" find files
+map <leader>ff :find<CR>
 
 " reformat code
 map <leader>rf <Action>(ReformatCode)
@@ -76,6 +68,4 @@ map <leader>w :w<CR>
 " toggle breakpoint on current line
 map <leader>b <Action>(ToggleLineBreakpoint)
 
-" search everywhere
-map <leader>ff <Action>(SearchEverywhere)
 " ------------------------
