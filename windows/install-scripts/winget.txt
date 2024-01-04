@@ -27,3 +27,4 @@ WinDirStat.WinDirStat
 Bitwarden.Bitwarden
 Nvidia.GeForceExperience
 9NF8H0H7WMLT
+TranslucentTB
