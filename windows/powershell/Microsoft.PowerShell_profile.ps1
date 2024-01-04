@@ -16,6 +16,7 @@ $Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
 
 # paths
 function go-personal {Set-Location "$HOME\Documents\work\personal\"}
+function go-warp {Set-Location "$HOME\Documents\work\warp\"}
 function go-startup {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
 function go-nvimConfig {Set-Location "$HOME\AppData\Local\nvim"}
 function go-vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
