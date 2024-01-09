@@ -14,18 +14,23 @@ vim.cmd("set noerrorbells")
 -- CUSTOM MAPPINGS
 vim.g.mapleader = " "
 
+-- split manipulation
+vim.keymap.set('n', '<leader>H', ':split<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>V', ':vsplit<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>', { noremap = true, silent = true })
 
-vim.keymap.set('n', '<c-q>', 'close<CR>', { noremap = true, silent = true })
+-- close tab
+vim.keymap.set('n', '<leader>q', ':close<CR>', { noremap = true, silent = true })
 
+-- save file
 vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>so', ':source ~/.config/nvim/lua/mappings.lua<CR>', { noremap = true, silent = true })
 
-vim.keymap.set('n', '<leader>H', ':split<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<leader>V', ':vsplit<CR>', { noremap = true, silent = true })
+-- source mappings.lua
+vim.keymap.set('n', '<leader>so', ':source ~/AppData/Local/nvim/lua/mappings.lua<CR>', { noremap = true, silent = true })
 
+-- system clipboard
 vim.keymap.set('n', '<leader>y', '"*y', { noremap = true, silent = true })
 vim.keymap.set('n', '<leader>p', '"*p', { noremap = true, silent = true })
