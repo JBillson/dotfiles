@@ -44,6 +44,7 @@ function yasb-restart { yasb-stop && yasb-start}
 # git
 function gs {git status}
 function ga([string]$file) {git add $file}
+function gd([string]$file) {git diff $file}
 function commit([string]$message) {git commit -m $message}
 function log {git log}
 
