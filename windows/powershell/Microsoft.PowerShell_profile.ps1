@@ -38,12 +38,8 @@ function amy { komorebic-stop && yasb-stop }
 
 # git
 function gs {git status}
-function gd {git diff}
-function ga {git add .}
-function pull {git pull}
-function push {git push}
-function gc {git commit}
-function gl {git log}
+function ga([string]$file) {git add $file}
+function commit([string]$message) {git commit -m $message}
 
 # commands
 Set-Alias vim nvim
