@@ -678,13 +678,6 @@
     id: _WwB
     comment: Targets a hidden window spawned by Microsoft Office applications
     matching_strategy: Legacy
-- name: Microsoft SQL Server Management Studio
-  identifier:
-    kind: Exe
-    id: Ssms.exe
-    matching_strategy: Legacy
-  options:
-  - border_overflow
 - name: Microsoft Teams
   identifier:
     kind: Class
@@ -915,6 +908,10 @@
   - kind: Exe
     id: PowerToys.PowerLauncher.exe
     comment: PpowerLauncher popup
+    matching_strategy: Equals
+  - kind: Exe
+    id: PowerToys.PowerAccent.exe
+    comment: PowerAccent popup
     matching_strategy: Equals
 - name: Process Hacker
   identifier:
