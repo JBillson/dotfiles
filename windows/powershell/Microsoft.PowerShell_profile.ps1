@@ -1,10 +1,10 @@
-#------------------------------------------------------------------#
 # STYLING
 
 # [oh my posh] - init pwsh with oh-my-posh
 oh-my-posh init pwsh --config "$HOME/.config/ohmyposh/.mytheme.omp.json" | Invoke-Expression
 
 #------------------------------------------------------------------#
+
 # ENVIRONMENT VARIABLES
 
 # [Komorebi + WHKD]
@@ -12,15 +12,23 @@ $Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
 $Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
 
 #------------------------------------------------------------------#
-# ALIASES
 
-# paths
-function go-personal {Set-Location "$HOME\Documents\work\personal\"}
-function go-warp {Set-Location "$HOME\Documents\work\warp\"}
-function go-startup {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
-function go-nvimConfig {Set-Location "$HOME\AppData\Local\nvim"}
-function go-vimConfig {Set-Location "$HOME\AppData\Local\nvim"}
-function go-dotfiles {Set-Location "$HOME\Documents\work\personal\dotfiles"}
+# PATHS
+
+function nav([string] $loc){
+  switch ($loc){
+    "personal" {Set-Location "$HOME\Documents\work\personal\"}
+    "warp" {Set-Location "$HOME\Documents\work\warp\"}
+    "dotfiles" {Set-Location "$HOME\Documents\work\personal\dotfiles"}
+    "vimConfig" {Set-Location "$HOME\AppData\Local\nvim"}
+    "nvimConfig" {Set-Location "$HOME\AppData\Local\nvim"}
+    "startup" {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
+  }
+}
+
+#------------------------------------------------------------------#
+
+# ALIASES
 
 # komorebic
 function komorebic-start {komorebic start --config "$HOME/.config/komorebi/komorebi.json" --whkd}
@@ -33,20 +41,16 @@ function yasb-stop { Stop-Process -Name yasb -ErrorAction SilentlyContinue }
 function yasb-start { C:/'Program Files'/yasb/yasb.exe -c "$HOME/.config/yasb/config.yaml" -s "$HOME/.config/yasb/styles.css" }
 function yasb-restart { yasb-stop && yasb-start}
 
-# AMY
-function amy { komorebic-stop && yasb-stop }
-
 # git
 function gs {git status}
 function ga([string]$file) {git add $file}
 function commit([string]$message) {git commit -m $message}
 
-# commands
+
+# other
 Set-Alias vim nvim
 Set-Alias reboot Restart-Computer
 Set-Alias shutdown Stop-Computer
-
-# other
 function ex {explorer .}
 function la {ls -Hidden}
 
@@ -56,6 +60,7 @@ Set-Alias -Name ls -Value ordered-list
 function ordered-list {Get-ChildItem | Sort-Object { [regex]::Replace($_.Name, '\d+', { $args[0].Value.PadLeft(20) }) }}
 
 #------------------------------------------------------------------#
+
 # CUSTOM FUNCTIONS
 
 function cguid {$guid = New-Guid 
@@ -63,6 +68,7 @@ function cguid {$guid = New-Guid
                 Write-Output $guid}
 
 #------------------------------------------------------------------#
+
 # MODULES
 
 # [terminal-icons]
@@ -72,6 +78,7 @@ Import-Module Terminal-Icons
 Import-Module 'C:\Program Files\gsudo\Current\gsudoModule.psd1'
 
 #------------------------------------------------------------------#
+
 # AUTO LAUNCH
 
 # [yasb]
@@ -81,10 +88,11 @@ Import-Module 'C:\Program Files\gsudo\Current\gsudoModule.psd1'
 
 # [komorebi]
 if (!(Get-Process komorebi -ErrorAction SilentlyContinue)){
-  komorebic start --config "$HOME/.config/komorebi/komorebi.json" --whkd
+  komorebic start -c "$HOME/.config/komorebi/komorebi.json" --whkd
 }
 
 #------------------------------------------------------------------#
+
 # OTHER
 
 # PowerShell parameter completion shim for the dotnet CLI
@@ -94,3 +102,5 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
             [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
         }
 }
+
+#------------------------------------------------------------------#
