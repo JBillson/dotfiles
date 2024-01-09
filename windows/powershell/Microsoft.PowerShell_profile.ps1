@@ -20,8 +20,8 @@ function nav([string] $loc){
     "personal" {Set-Location "$HOME\Documents\work\personal\"}
     "warp" {Set-Location "$HOME\Documents\work\warp\"}
     "dotfiles" {Set-Location "$HOME\Documents\work\personal\dotfiles"}
-    "vimConfig" {Set-Location "$HOME\AppData\Local\nvim"}
-    "nvimConfig" {Set-Location "$HOME\AppData\Local\nvim"}
+    "vim-config" {Set-Location "$HOME\AppData\Local\nvim"}
+    "nvim-config" {Set-Location "$HOME\AppData\Local\nvim"}
     "startup" {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
   }
 }
