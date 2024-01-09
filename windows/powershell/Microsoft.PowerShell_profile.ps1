@@ -55,7 +55,8 @@ function ga([string]$file){git add $file}
 function gd([string]$file){git diff $file}
 function commit([string]$message){git commit -m $message}
 function log {git log}
-
+function push {git push}
+function pull {git pull}
 
 # other
 Set-Alias vim nvim
