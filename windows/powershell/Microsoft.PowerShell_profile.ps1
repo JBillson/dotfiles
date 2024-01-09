@@ -7,7 +7,7 @@ oh-my-posh init pwsh --config "$HOME/.config/ohmyposh/.mytheme.omp.json" | Invok
 
 # ENVIRONMENT VARIABLES
 
-# [Komorebi + WHKD]
+# [Komorebi]
 $Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
 $Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
 
@@ -31,21 +31,29 @@ function nav([string] $loc){
 # ALIASES
 
 # komorebic
-function komorebic-start {komorebic start --config "$HOME/.config/komorebi/komorebi.json" --whkd}
-function komorebic-stop {komorebic stop}
-function komorebic-update {komorebic fetch-app-specific-configuration}
-function komorebic-restart {komorebic-stop && komorebic-start}
+function k([string]$arg){
+  switch ($arg){
+    "start" {komorebic start -c "$HOME/.config/komorebi/komorebi.json" --whkd}
+    "stop" {komorebic stop}
+    "update" {komorebic fetch-app-specific-configuration}
+    "restart" {k stop && k start}
+  }
+}
 
 # yasb
-function yasb-stop { Stop-Process -Name yasb -ErrorAction SilentlyContinue }
-function yasb-start { C:/'Program Files'/yasb/yasb.exe -c "$HOME/.config/yasb/config.yaml" -s "$HOME/.config/yasb/styles.css" }
-function yasb-restart { yasb-stop && yasb-start}
+function y([string]$arg){
+  switch ($arg){
+    "stop" { Stop-Process -Name yasb -ErrorAction SilentlyContinue }
+    "start" { C:/'Program Files'/yasb/yasb.exe -c "$HOME/.config/yasb/config.yaml" -s "$HOME/.config/yasb/styles.css" }
+    "restart" { y stop && y start}
+  }
+}
 
 # git
 function gs {git status}
-function ga([string]$file) {git add $file}
-function gd([string]$file) {git diff $file}
-function commit([string]$message) {git commit -m $message}
+function ga([string]$file){git add $file}
+function gd([string]$file){git diff $file}
+function commit([string]$message){git commit -m $message}
 function log {git log}
 
 
@@ -65,9 +73,11 @@ function ordered-list {Get-ChildItem | Sort-Object { [regex]::Replace($_.Name, '
 
 # CUSTOM FUNCTIONS
 
-function cguid {$guid = New-Guid 
-                $guid | Set-Clipboard
-                Write-Output $guid}
+function cguid(){
+  $guid = New-Guid 
+  $guid | Set-Clipboard
+  Write-Output $guid
+}
 
 #------------------------------------------------------------------#
 
@@ -85,12 +95,12 @@ Import-Module 'C:\Program Files\gsudo\Current\gsudoModule.psd1'
 
 # [yasb]
 #if (!(Get-Process yasb -ErrorAction SilentlyContinue)){
-#    yasb-start -ErrorAction SilentlyContinue
+#    y start
 #}
 
 # [komorebi]
 if (!(Get-Process komorebi -ErrorAction SilentlyContinue)){
-  komorebic start -c "$HOME/.config/komorebi/komorebi.json" --whkd
+  k start
 }
 
 #------------------------------------------------------------------#
