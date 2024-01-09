@@ -33,19 +33,16 @@ let mapleader = "\<Space>"
 " source ~/.ideavimrc
 nnoremap <leader>so :source ~/.ideavimrc<CR>
 
-" save file
-map <leader>w :w<CR>
-
 " toggle file explorer
 map <C-f> :NERDTreeToggle<CR>
 
-" tab manipulation
+" tabs
 map <C-n> :tabnext<CR>
 map <C-p> :tabprevious<CR>
 map <leader>q :close<CR>
 map <leader>Q :action CloseAllEditorsButActive<CR>
 
-" split manipulation
+" splits
 map <leader>V :vsplit<CR>
 map <leader>H :split<CR>
 map <C-h> <C-w>h
@@ -53,18 +50,25 @@ map <C-l> <C-w>l
 map <C-k> <C-w>k
 map <C-j> <C-w>j
 
-" system clipboard
+" clipboard
 map <leader>y "+y
 map <leader>p "+p
 
-" find files
+" find
 map <leader>ff :find<CR>
 map <leader>fs :action FindInPath<CR>
 
-" reformat code
+" formatting
+map <leader>w :w<CR>
 map <leader>rf :action ReformatCode<CR>
 
-" toggle breakpoint on current line
-map <leader>b :action ToggleLineBreakpoint<CR>
+" debug
+map <leader>dr :action Run<CR>
+map <leader>dd :action Debug<CR>
+map <leader>ds :action Stop<CR>
+map <leader>dm :action RunMenu<CR>
+map <leader>db :action ToggleLineBreakpoint<CR>
+map <leader>dn :action StepOver<CR>
+map <leader>dc :action Resume<CR>
 
 " ------------------------
