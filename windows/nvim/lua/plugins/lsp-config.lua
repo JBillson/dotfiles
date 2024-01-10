@@ -1,3 +1,7 @@
+-- language server plugins
+-- [mason.nvim]: Easily install and manage LSP servers, DAP servers, linters, and formatters
+-- [mason-lspconfig.nvim]: Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
+-- [nvim-lspconfig]: Quickstart configs for Nvim LSP
 return {
   {
     "williamboman/mason.nvim",

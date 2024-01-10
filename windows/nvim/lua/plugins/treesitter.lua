@@ -1,3 +1,4 @@
+-- adds language based highlighting by using language parsers
 return {
   'nvim-treesitter/nvim-treesitter',
   build = ":TSUpdate",
