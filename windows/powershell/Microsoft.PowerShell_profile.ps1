@@ -53,6 +53,7 @@ function y([string]$arg){
 function gs {git status}
 function ga([string]$file){git add $file}
 function gd([string]$file){git diff $file}
+function gr([string]$file){git restore --staged $file}
 function commit([string]$message){git commit -m $message}
 function log {git log}
 function push {git push}
