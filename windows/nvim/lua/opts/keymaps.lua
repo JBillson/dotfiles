@@ -29,7 +29,7 @@ setKeymap("n", "<leader>w", ":w<CR>", opts)
 -- source keymaps.lua
 setKeymap(
 	"n",
-	"<leader>so",
+	"<leader>%",
 	":source ~/AppData/Local/nvim/lua/opts/opts.lua<CR>:source ~/AppData/Local/nvim/lua/opts/keymaps.lua<CR>",
 	opts
 )
