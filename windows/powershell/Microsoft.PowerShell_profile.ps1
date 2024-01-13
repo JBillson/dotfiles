@@ -20,8 +20,8 @@ function nav([string] $loc){
     "personal" {Set-Location "$HOME\Documents\work\personal\"}
     "warp" {Set-Location "$HOME\Documents\work\warp\"}
     "dotfiles" {Set-Location "$HOME\Documents\work\personal\dotfiles"}
-    "vim-config" {Set-Location "$HOME\AppData\Local\nvim"}
     "nvim-config" {Set-Location "$HOME\AppData\Local\nvim"}
+    "nvim-data" {Set-Location "$HOME\AppData\Local\nvim-data"}
     "startup" {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
   }
 }
@@ -65,6 +65,9 @@ Set-Alias reboot Restart-Computer
 Set-Alias shutdown Stop-Computer
 function ex {explorer .}
 function la {ls -Hidden}
+function find([string]$arg){
+  (Get-Command $arg).Path
+}
 
 # ls with natural sorting
 # https://stackoverflow.com/questions/5427506/how-to-sort-by-file-name-the-same-way-windows-explorer-does#:~:text=To%20be%20able%20to%20sort,natural%20sorting%20for%20Windows%20Explorer.
