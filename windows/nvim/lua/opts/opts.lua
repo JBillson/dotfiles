@@ -15,6 +15,7 @@ local options = {
   expandtab = true,
   incsearch = true,
   shellslash = false,
+  termguicolors = true,
 }
 
 for k, v in pairs(options) do

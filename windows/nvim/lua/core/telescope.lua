@@ -27,15 +27,7 @@ return {
     "smartpde/telescope-recent-files",
     config = function()
       require("telescope").load_extension("recent_files")
-      vim.keymap.set("n", "<leader>fh", require("telescope").extensions.recent_files.pick, {})
-    end,
-  },
-  {
-    "nvim-telescope/telescope-frecency.nvim",
-    config = function()
-      require("telescope").load_extension("frecency")
-
-      vim.keymap.set("n", "<leader>fr", ":Telescope frecency<CR>", {})
+      vim.keymap.set("n", "<leader>fr", require("telescope").extensions.recent_files.pick, {})
     end,
   },
   {
@@ -43,8 +35,8 @@ return {
     config = function()
       require("telescope").load_extension("vim_bookmarks")
 
-      vim.keymap.set("n", "<leader>fm", ":Telescope vim_bookmarks all<CR>", {})
-      vim.keymap.set("n", "<leader>fM", ":Telescope vim_bookmarks current_file<CR>", {})
+      vim.keymap.set("n", "<leader>fm", ":Telescope vim_bookmarks current_file<CR>", {})
+      vim.keymap.set("n", "<leader>fM", ":Telescope vim_bookmarks all<CR>", {})
     end,
   },
 }

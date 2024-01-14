@@ -1,4 +1,4 @@
--- alpha is a fast and fully programmable greeter for neovim.
+-- neovim dashboard 
 return {
   "goolord/alpha-nvim",
   dependencies = { "nvim-tree/nvim-web-devicons" },
