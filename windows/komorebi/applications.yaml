@@ -678,6 +678,13 @@
     id: _WwB
     comment: Targets a hidden window spawned by Microsoft Office applications
     matching_strategy: Legacy
+- name: Microsoft SQL Server Management Studio
+  identifier:
+    kind: Exe
+    id: Ssms.exe
+    matching_strategy: Equals
+  options:
+  - border_overflow
 - name: Microsoft Teams
   identifier:
     kind: Class
@@ -1223,6 +1230,16 @@
   options:
   - border_overflow
   - tray_and_multi_window
+- name: Total Commander
+  identifier:
+    kind: Exe
+    id: TotalCMD64.exe
+    matching_strategy: Equals
+  float_identifiers:
+  - kind: Class
+    id: TDLG2FILEACTIONMIN
+    comment: Target standard copy window
+    matching_strategy: Equals
 - name: TouchCursor
   identifier:
     kind: Exe
