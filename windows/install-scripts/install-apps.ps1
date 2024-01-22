@@ -10,12 +10,12 @@ $winget = Get-Content ./winget.txt
 $scoop = Get-Content ./scoop.txt
 $wingetUninstall = Get-Content ./uninstall.txt
 
-Write-Output "-------------Installing Games--------------------" 
-foreach ($app in $games){
-    Write-Output "Installing $app from WinGet"
-    winget install $app -h --no-upgrade
-}
-Write-Output "-------------------------------------------------------" 
+# Write-Output "-------------Installing Games--------------------" 
+# foreach ($app in $games){
+#     Write-Output "Installing $app from WinGet"
+#     winget install $app -h --no-upgrade
+# }
+# Write-Output "-------------------------------------------------------" 
 
 Write-Output "-------------Installing WinGet Apps--------------------" 
 foreach ($app in $winget){
