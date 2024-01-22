@@ -17,12 +17,14 @@ $Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
 
 function nav([string] $loc){
   switch ($loc){
-    "personal" {Set-Location "$HOME\Documents\work\personal\"}
-    "warp" {Set-Location "$HOME\Documents\work\warp\"}
-    "dotfiles" {Set-Location "$HOME\Documents\work\personal\dotfiles"}
-    "nvim-config" {Set-Location "$HOME\AppData\Local\nvim"}
-    "nvim-data" {Set-Location "$HOME\AppData\Local\nvim-data"}
-    "startup" {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"}
+    "personal" {Set-Location "$HOME\Documents\work\personal\"; break} 
+    "warp" {Set-Location "$HOME\Documents\work\warp\"; break}
+    "dotfiles" {Set-Location "$HOME\Documents\work\personal\dotfiles"; break}
+    "nvim-config" {Set-Location "$HOME\AppData\Local\nvim"; break}
+    "nvim-data" {Set-Location "$HOME\AppData\Local\nvim-data"; break}
+    "startup" {Set-Location "$HOME\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"; break}
+    "" {Write-Output "Please choose a custom directory to navigate to"; break}
+    default {Write-Output "Invalid custom directory"; break}
   }
 }
 
@@ -37,6 +39,7 @@ function k([string]$arg){
     "stop" {komorebic stop}
     "update" {komorebic fetch-app-specific-configuration}
     "restart" {k stop && k start}
+    "kill" {k stop && Stop-Process -name komorebi && Stop-Process -name whkd}
   }
 }
 
