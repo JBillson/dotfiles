@@ -1,0 +1,3 @@
+Microsoft.PowerShell
+Git.Git
+gerardog.gsudo

@@ -5,11 +5,9 @@ Microsoft.PowerToys
 Microsoft.Teams
 Oracle.VirtualBox
 Neovim.Neovim
-gerardog.gsudo
 Microsoft.VisualStudioCode
 python3
 GoLang.Go
-Git.Git
 JanDeDobbeleer.OhMyPosh
 Google.AndroidStudio
 JetBrains.Rider
@@ -29,3 +27,5 @@ Nvidia.GeForceExperience
 9NF8H0H7WMLT
 TranslucentTB
 Microsoft.DotNet.SDK.8
+Microsoft.SQLServerManagementStudio
+Microsoft.SQLServer.2022.Developer
