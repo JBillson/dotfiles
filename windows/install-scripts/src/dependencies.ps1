@@ -1,6 +1,11 @@
 Write-Output "----------Installing Scoop Package Manager-------------" 
-irm get.scoop.sh | iex
-scoop bucket add extras
+if(!(Test-Path -Path "$HOME/scoop/shims/scoop.ps1")){
+    irm get.scoop.sh | iex 
+    scoop bucket add extras
+}
+else{
+    Write-Output "Already Installed"
+}
 Write-Output "-------------------------------------------------------" 
 
 Write-Output "-------------Installing Dependencies--------------------" 
