@@ -5,10 +5,10 @@ if (!$currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Adminis
   Break
 }
 
-$games = Get-Content ../data/games.txt
-$winget = Get-Content ../data/winget.txt
-$scoop = Get-Content ../data/scoop.txt
-$wingetUninstall = Get-Content ../data/uninstall.txt
+$games = Get-Content ./data/games.txt
+$winget = Get-Content ./data/winget.txt
+$scoop = Get-Content ./data/scoop.txt
+$wingetUninstall = Get-Content ./data/uninstall.txt
 
 # Write-Output "-------------Installing Games--------------------" 
 # foreach ($app in $games){
