@@ -20,9 +20,9 @@ set scrolloff=10
 set visualbell
 set noerrorbells
 set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 " ------------------
 
@@ -33,22 +33,19 @@ let mapleader = "\<Space>"
 " source ~/.ideavimrc
 nnoremap <leader>so :source ~/.ideavimrc<CR>
 
-" toggle file explorer
-map <C-f> :NERDTreeToggle<CR>
-
 " tabs
-map <C-n> :tabnext<CR>
-map <C-p> :tabprevious<CR>
+nnoremap <C-n> :tabnext<CR>
+nnoremap <C-p> :tabprevious<CR>
 map <leader>q :close<CR>
 map <leader>Q :action CloseAllEditorsButActive<CR>
 
 " splits
 map <leader>V :vsplit<CR>
 map <leader>H :split<CR>
-map <C-h> <C-w>h
-map <C-l> <C-w>l
-map <C-k> <C-w>k
-map <C-j> <C-w>j
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
 
 " clipboard
 map <leader>y "+y
@@ -69,6 +66,12 @@ map <leader>ds :action Stop<CR>
 map <leader>dm :action RunMenu<CR>
 map <leader>db :action ToggleLineBreakpoint<CR>
 map <leader>dn :action StepOver<CR>
+map <leader>di :action StepInto<CR>
+map <leader>do :action StepOut<CR>
 map <leader>dc :action Resume<CR>
+
+" navigation
+map <S-b> :action Back<CR>
+map <S-n> :action Forward<CR>
 
 " ------------------------
