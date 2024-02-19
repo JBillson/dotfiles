@@ -5,8 +5,8 @@
   "cross_monitor_move_behaviour": "Insert",
   "unmanaged_window_operation_behaviour": "Op",
   "mouse_follows_focus": true,
-  "default_workspace_padding": 15,
-  "default_container_padding": 15,
+  "default_workspace_padding": 5,
+  "default_container_padding": 5,
   "active_window_border": true,
   "border_width": 4,
   "border_offset": {
@@ -122,12 +122,12 @@
       "kind": "Title"
     },
     {
-      "id": "Sideloader.exe",
+      "id": "PowerToys.PowerLauncher.exe",
       "kind": "Exe"
     },
     {
-      "id": "PowerToys.PowerLauncher.exe",
-      "kind": "Exe"
+      "id": "Bitwarden",
+      "kind": "Title"
     }
   ]
 }
