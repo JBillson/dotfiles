@@ -29,3 +29,4 @@ TranslucentTB
 Microsoft.DotNet.SDK.8
 Microsoft.SQLServerManagementStudio
 Microsoft.SQLServer.2022.Developer
+Oracle.MySQLWorkbench
