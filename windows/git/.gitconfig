@@ -11,3 +11,5 @@
 [safe]
 	directory = C:/Users/justi/Documents
 	directory = C:/Users/justi/Documents/work/personal/dotfiles
+[maintenance]
+	repo = C:/Users/justi/Documents/work/warp/ordereazi
