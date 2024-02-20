@@ -35,3 +35,4 @@ Oracle.MySQL
 TheDocumentFoundation.LibreOffice.LTS
 GitHub.cli
 Postman.Postman
+Microsoft.DotNet.HostingBundle.8
