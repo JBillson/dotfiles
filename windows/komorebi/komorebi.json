@@ -32,7 +32,7 @@
       "b": 0
     }
   },
-  "alt_focus_hack": false,
+  "alt_focus_hack": true,
   "window_hiding_behaviour": "Cloak",
   "monitors": [
     {
