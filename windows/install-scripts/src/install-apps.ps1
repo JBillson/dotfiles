@@ -22,6 +22,8 @@ foreach ($app in $winget){
     if ($app -eq "LGUG2Z.komorebi"){
         Write-Output "[Komorebi] Enabling Long Path Support"
         Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
+        Write-Output "[Komorebi] Creating Komorebi data directory"
+        mkdir "$Env:LOCALAPPDATA\komorebi" -ea 0
     }
 
     Write-Output "Installing $app from WinGet"
