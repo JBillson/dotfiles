@@ -27,6 +27,7 @@ Nvidia.GeForceExperience
 Nvidia.ControlPanel
 9NF8H0H7WMLT
 TranslucentTB
+Microsoft.DotNet.SDK.6
 Microsoft.DotNet.SDK.8
 Microsoft.SQLServerManagementStudio
 Microsoft.SQLServer.2022.Developer
