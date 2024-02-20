@@ -24,6 +24,7 @@ sharkdp.fd
 WinDirStat.WinDirStat
 Bitwarden.Bitwarden
 Nvidia.GeForceExperience
+Nvidia.ControlPanel
 9NF8H0H7WMLT
 TranslucentTB
 Microsoft.DotNet.SDK.8
@@ -31,3 +32,6 @@ Microsoft.SQLServerManagementStudio
 Microsoft.SQLServer.2022.Developer
 Oracle.MySQLWorkbench
 Oracle.MySQL
+TheDocumentFoundation.LibreOffice.LTS
+GitHub.cli
+Postman.Postman
