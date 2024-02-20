@@ -1,6 +1,3 @@
-echo "${pwd}"
-return
-
 New-ItemProperty 'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\User Shell Folders' Personal -Value 'C:\Users\justi\.config' -Type ExpandString -Force
 
 $changes = ''
