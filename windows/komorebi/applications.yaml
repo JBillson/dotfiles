@@ -148,6 +148,19 @@
     matching_strategy: Equals
   options:
   - tray_and_multi_window
+- name: CLion
+  identifier:
+    kind: Exe
+    id: clion64.exe
+    matching_strategy: Equals
+  options:
+  - object_name_change
+  - tray_and_multi_window
+  float_identifiers:
+  - kind: Class
+    id: SunAwtDialog
+    comment: Targets JetBrains IDE popups and floating windows
+    matching_strategy: Equals
 - name: Calculator
   identifier:
     kind: Title
@@ -238,6 +251,13 @@
   - border_overflow
   - tray_and_multi_window
   - force
+- name: Discord Bot Client
+  identifier:
+    kind: Exe
+    id: DiscordBotClient.exe
+    matching_strategy: Equals
+  options:
+  - border_overflow
 - name: DiscordCanary
   identifier:
     kind: Exe
@@ -890,6 +910,13 @@
     matching_strategy: Equals
   options:
   - border_overflow
+- name: Postman
+  identifier:
+    kind: Exe
+    id: Postman.exe
+    matching_strategy: Equals
+  options:
+  - border_overflow
 - name: PowerToys
   identifier:
     kind: Exe
@@ -1326,6 +1353,19 @@
   options:
   - border_overflow
   - tray_and_multi_window
+- name: WebStorm
+  identifier:
+    kind: Exe
+    id: webstorm64.exe
+    matching_strategy: Equals
+  options:
+  - object_name_change
+  - tray_and_multi_window
+  float_identifiers:
+  - kind: Class
+    id: SunAwtDialog
+    comment: Targets JetBrains IDE popups and floating windows
+    matching_strategy: Equals
 - name: WebTorrent Desktop
   identifier:
     kind: Exe
