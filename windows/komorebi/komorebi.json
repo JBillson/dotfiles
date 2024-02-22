@@ -1,118 +1,43 @@
 {
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.20/schema.json",
   "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
-  "resize_delta": 100,
-  "window_container_behaviour": "Create",
+  "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
-  "unmanaged_window_operation_behaviour": "Op",
-  "mouse_follows_focus": true,
-  "default_workspace_padding": 5,
-  "default_container_padding": 5,
+  "default_workspace_padding": 10,
+  "default_container_padding": 10,
   "active_window_border": true,
-  "border_width": 4,
-  "border_offset": {
-    "bottom": -5,
-    "left": -4,
-    "right": -8,
-    "top": -3 
-  },
+  "active_window_border_width": 15,
   "active_window_border_colours": {
-    "single": {
-      "r": 0,
-      "g": 0,
-      "b": 255
-    },
-    "monocle": {
-      "r": 255,
-      "g": 0,
-      "b": 0
-    },
-    "stack": {
-      "r": 0,
-      "g": 255,
-      "b": 0
-    }
+    "single": { "r": 0, "g": 0, "b": 255 },
+    "monocle": { "r": 255, "g": 0, "b": 0 },
+    "stack": { "r": 0, "g": 255, "b": 0 }
   },
   "alt_focus_hack": true,
-  "window_hiding_behaviour": "Cloak",
   "monitors": [
     {
       "workspaces": [
-        {
-          "name": "a",
-          "layout": "Columns"
-        },
-        {
-          "name": "b",
-          "layout": "Columns"
-        },
-        {
-          "name": "c",
-          "layout": "Columns"
-        },
-        {
-          "name": "d",
-          "layout": "Columns"
-        },
-        {
-          "name": "e",
-          "layout": "Columns"
-        },
-        {
-          "name": "f",
-          "layout": "Columns"
-        },
-        {
-          "name": "g",
-          "layout": "Columns"
-        },
-        {
-          "name": "h",
-          "layout": "Columns"
-        },
-        {
-          "name": "i",
-          "layout": "Columns"
-        }
+        { "name": "a", "layout": "Columns" },
+        { "name": "b", "layout": "Columns" },
+        { "name": "c", "layout": "Columns" },
+        { "name": "d", "layout": "Columns" },
+        { "name": "e", "layout": "Columns" },
+        { "name": "f", "layout": "Columns" },
+        { "name": "g", "layout": "Columns" },
+        { "name": "h", "layout": "Columns" },
+        { "name": "i", "layout": "Columns" }
       ]
     },
     {
       "workspaces": [
-        {
-          "name": "I",
-          "layout": "Columns"
-        },
-        {
-          "name": "II",
-          "layout": "Columns"
-        },
-        {
-          "name": "III",
-          "layout": "Columns"
-        },
-        {
-          "name": "IV",
-          "layout": "Columns"
-        },
-        {
-          "name": "V",
-          "layout": "Columns"
-        },
-        {
-          "name": "VI",
-          "layout": "Columns"
-        },
-        {
-          "name": "VII",
-          "layout": "Columns"
-        },
-        {
-          "name": "VIII",
-          "layout": "Columns"
-        },
-        {
-          "name": "IX",
-          "layout": "Columns"
-        }
+        { "name": "I", "layout": "Columns" },
+        { "name": "II", "layout": "Columns" },
+        { "name": "III", "layout": "Columns" },
+        { "name": "IV", "layout": "Columns" },
+        { "name": "V", "layout": "Columns" },
+        { "name": "VI", "layout": "Columns" },
+        { "name": "VII", "layout": "Columns" },
+        { "name": "VIII", "layout": "Columns" },
+        { "name": "IX", "layout": "Columns" }
       ]
     }
   ],
