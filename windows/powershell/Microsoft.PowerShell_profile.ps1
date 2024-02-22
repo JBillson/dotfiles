@@ -1,7 +1,8 @@
 # STYLING
 
 # [oh my posh] - init pwsh with oh-my-posh
-oh-my-posh init pwsh --config "$HOME/.config/ohmyposh/.mytheme.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh --config "$HOME/.config/ohmyposh/.mytheme.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/marcduiker.omp.json" | Invoke-Expression
 
 #------------------------------------------------------------------#
 
