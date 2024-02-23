@@ -6,9 +6,9 @@
   "default_workspace_padding": 10,
   "default_container_padding": 10,
   "active_window_border": true,
-  "active_window_border_width": 15,
+  "active_window_border_width": 20,
   "active_window_border_colours": {
-    "single": { "r": 0, "g": 0, "b": 255 },
+    "single": { "r": 109, "g": 153, "b": 216 },
     "monocle": { "r": 255, "g": 0, "b": 0 },
     "stack": { "r": 0, "g": 255, "b": 0 }
   },
