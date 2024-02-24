@@ -31,7 +31,7 @@ set shiftwidth=4
 let mapleader = "\<Space>"
 
 " source ~/.ideavimrc
-nnoremap <leader>so :source ~/.ideavimrc<CR>
+map <leader>so :source ~/.ideavimrc<CR>
 
 " tabs
 nnoremap <C-n> :tabnext<CR>
@@ -46,7 +46,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-k> <C-w>k
 nnoremap <C-j> <C-w>j
-
+ 
 " clipboard
 map <leader>y "+y
 map <leader>p "+p
@@ -65,13 +65,13 @@ map <leader>dd :action Debug<CR>
 map <leader>ds :action Stop<CR>
 map <leader>dm :action RunMenu<CR>
 map <leader>db :action ToggleLineBreakpoint<CR>
-map <leader>dn :action StepOver<CR>
-map <leader>di :action StepInto<CR>
-map <leader>do :action StepOut<CR>
-map <leader>dc :action Resume<CR>
+nnoremap <C-S-n> :action StepOver<CR>
+nnoremap <C-S-i> :action StepInto<CR>
+nnoremap <C-S-o> :action StepOut<CR>
+nnoremap <C-S-c> :action Resume<CR>
 
 " navigation
-map <S-b> :action Back<CR>
+map <S-p> :action Back<CR>
 map <S-n> :action Forward<CR>
 
-" ------------------------
+"------------------------
