@@ -56,7 +56,7 @@ map <leader>ff :find<CR>
 map <leader>fs :action FindInPath<CR>
 
 " formatting
-map <leader>w :w<CR>
+map <leader>w :action SaveAll<CR>
 map <leader>rf :action ReformatCode<CR>
 
 " debug
@@ -71,7 +71,8 @@ nnoremap <C-S-o> :action StepOut<CR>
 nnoremap <C-S-c> :action Resume<CR>
 
 " navigation
-map <S-p> :action Back<CR>
-map <S-n> :action Forward<CR>
+nnoremap <S-b> :action Back<CR>
+nnoremap <S-f> :action Forward<CR>
+map gi :action ReSharperGotoImplementation<CR>
 
 "------------------------
