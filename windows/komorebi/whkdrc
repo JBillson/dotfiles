@@ -26,12 +26,12 @@ alt + back              : komorebic cycle-monitor next
 alt + shift + back      : komorebic cycle-send-to-monitor next
 
 # Stack windows
-alt + ctrl + h          : komorebic stack left
-alt + ctrl + j          : komorebic stack down
-alt + ctrl + k          : komorebic stack up
-alt + ctrl + l          : komorebic stack right
-alt + oem_1             : komorebic unstack # oem_1 is ;
-alt + oem_6             : komorebic cycle-stack next # oem_6 is ]
+# alt + ctrl + h          : komorebic stack left
+# alt + ctrl + j          : komorebic stack down
+# alt + ctrl + k          : komorebic stack up
+# alt + ctrl + l          : komorebic stack right
+# alt + oem_1             : komorebic unstack # oem_1 is ;
+# alt + oem_6             : komorebic cycle-stack next # oem_6 is ]
 
 # Resize
 alt + oem_plus          : komorebic resize-axis horizontal increase
