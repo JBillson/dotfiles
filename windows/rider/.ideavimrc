@@ -26,6 +26,7 @@ set shiftwidth=4
 
 " ------------------
 
+
 " ---- CUSTOM MAPPINGS ----
 " leader key
 let mapleader = "\<Space>"
@@ -76,3 +77,10 @@ nnoremap <S-f> :action Forward<CR>
 map gi :action ReSharperGotoImplementation<CR>
 
 "------------------------
+
+" ---- CODEIUM ----
+
+map <leader>ca :action codeium.aR<CR>
+map <leader>cr :action codeium.aS<CR>
+
+" ------------------
