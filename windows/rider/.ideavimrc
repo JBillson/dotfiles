@@ -80,7 +80,9 @@ map gi :action ReSharperGotoImplementation<CR>
 
 " ---- CODEIUM ----
 
-map <leader>ca :action codeium.aR<CR>
+" ask / quick explain
+map <leader>ca :action codeium.aR<CR> 
+" refactor 
 map <leader>cr :action codeium.aS<CR>
 
 " ------------------
