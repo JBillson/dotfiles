@@ -72,6 +72,7 @@ function la {ls -Hidden}
 function find([string]$arg){
   (Get-Command $arg).Path
 }
+function delete([string]$arg){ rm -r -Force $arg }
 
 # ls with natural sorting
 # https://stackoverflow.com/questions/5427506/how-to-sort-by-file-name-the-same-way-windows-explorer-does#:~:text=To%20be%20able%20to%20sort,natural%20sorting%20for%20Windows%20Explorer.
