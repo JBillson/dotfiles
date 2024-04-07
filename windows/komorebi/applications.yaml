@@ -250,7 +250,7 @@
   options:
   - border_overflow
   - tray_and_multi_window
-  - force
+  - layered
 - name: Discord Bot Client
   identifier:
     kind: Exe
@@ -850,7 +850,6 @@
     matching_strategy: Equals
   options:
   - border_overflow
-  - force
 - name: OneDrive
   identifier:
     kind: Exe
