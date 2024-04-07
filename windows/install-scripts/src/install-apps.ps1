@@ -10,18 +10,35 @@ $winget = Get-Content ./data/winget.txt
 $scoop = Get-Content ./data/scoop.txt
 $wingetUninstall = Get-Content ./data/uninstall.txt
 
-# Write-Output "-------------Installing Games--------------------" 
-# foreach ($app in $games){
-#     Write-Output "Installing $app from WinGet"
-#     winget install $app -h --no-upgrade
-# }
-# Write-Output "-------------------------------------------------------" 
+$installGames = "false"
+$uninstallBloatware = "false"
+
+
+Write-Output "--------------------Config------------------------"
+$confirmation = Read-Host "Do you Games in this install? [y/n]"
+if ($confirmation -eq "y") {
+  $installGames = "true"
+}
+$confirmation = Read-Host "Do you want to uninstall Windows Bloatware in this install? [y/n]"
+if ($confirmation -eq "y") {
+  $uninstallBloatware = "true"
+}
+Write-Output "--------------------------------------------------"
+
+if ($installGames -eq "true") {
+  Write-Output "-------------Installing Games--------------------" 
+    foreach ($app in $games){
+        Write-Output "Installing $app from WinGet"
+        winget install $app -h --no-upgrade
+    }
+  Write-Output "-------------------------------------------------" 
+}
 
 Write-Output "-------------Installing WinGet Apps--------------------" 
 foreach ($app in $winget){
     if ($app -eq "LGUG2Z.komorebi"){
         Write-Output "[Komorebi] Enabling Long Path Support"
-        Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
+        Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1
         Write-Output "[Komorebi] Creating Komorebi data directory"
         mkdir "$Env:LOCALAPPDATA\komorebi" -ea 0
     }
@@ -38,10 +55,12 @@ foreach ($app in $scoop){
 }
 Write-Output "-------------------------------------------------------" 
 
-Write-Output "----------------Uninstalling Bloatware-----------------" 
-foreach ($app in $wingetUninstall){
-    Write-Output "Uninstalling $app"
-    winget uninstall $app
+if ($uninstallBloatware -eq "true") {
+  Write-Output "----------------Uninstalling Bloatware-----------------" 
+  foreach ($app in $wingetUninstall){
+      Write-Output "Uninstalling $app"
+      winget uninstall $app
+  }
+  Write-Output "-------------------------------------------------------" 
 }
-Write-Output "-------------------------------------------------------" 
 

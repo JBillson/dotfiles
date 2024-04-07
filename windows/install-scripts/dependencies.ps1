@@ -1,7 +1,15 @@
 Write-Output "----------Installing Scoop Package Manager-------------" 
 if(!(Test-Path -Path "$HOME/scoop/shims/scoop.ps1")){
-    irm get.scoop.sh | iex 
-    scoop bucket add extras
+  ./scoop.ps1
+}
+else{
+    Write-Output "Already Installed"
+}
+Write-Output "-------------------------------------------------------" 
+
+Write-Output "----------------Installing Zebar-----------------------" 
+if(!(Test-Path -Path "C:/Program Files/Zebar")){
+  ./zebar.ps1
 }
 else{
     Write-Output "Already Installed"

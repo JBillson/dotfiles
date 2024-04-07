@@ -4,7 +4,7 @@
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
   "default_workspace_padding": 10,
-  "default_container_padding": 10,
+  "default_container_padding": 5,
   "active_window_border": true,
   "border_width": 5,
   "active_window_border_colours": {
@@ -14,6 +14,12 @@
   },
   "monitors": [
     {
+      "work_area_offset": {
+        "top": 35,
+        "bottom": 35,
+        "left": 0,
+        "right": 0
+      },
       "workspaces": [
         { "name": "a", "layout": "Columns" },
         { "name": "b", "layout": "Columns" },
@@ -44,6 +50,11 @@
     {
       "id": "Counter-Strike 2",
       "kind": "Title"
+    },
+    {
+      "kind": "Exe",
+      "id": "Zebar.exe",
+      "matching_strategy": "Equals"
     }
   ]
 }

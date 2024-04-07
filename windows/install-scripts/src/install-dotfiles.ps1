@@ -62,7 +62,14 @@ sudo New-Item -ItemType SymbolicLink  $WindowsTerminal -Target "${pwd}/../../win
 $yasb = '~/.config/yasb'
 if (!(Test-Path -Path $yasb)){
   echo "Creating yasb symlink"
-  sudo New-Item -ItemType SymbolicLink -Path "~/.config/yasb" -Target "${pwd}/../../yasb" -ErrorAction SilentlyContinue
+  sudo New-Item -ItemType SymbolicLink -Path $yasb -Target "${pwd}/../../yasb" -ErrorAction SilentlyContinue
+  $changes = 'true'
+}
+
+$zebar = '~/.glzr/zebar'
+if (!(Test-Path -Path $zebar)){
+  echo "Creating zebar symlink"
+  sudo New-Item -ItemType SymbolicLink -Path $zebar -Target "${pwd}/../../zebar" -ErrorAction SilentlyContinue
   $changes = 'true'
 }
 
