@@ -69,7 +69,7 @@ if (!(Test-Path -Path $yasb)){
 $zebar = '~/.glzr/zebar'
 if (!(Test-Path -Path $zebar)){
   echo "Creating zebar symlink"
-  sudo New-Item -ItemType SymbolicLink -Path $zebar -Target "${pwd}/../../zebar" -ErrorAction SilentlyContinue
+  sudo New-Item -ItemType SymbolicLink -Path $zebar -Target "${pwd}/../../zebar" -ErrorAction SilentlyContinue -Force
   $changes = 'true'
 }
 

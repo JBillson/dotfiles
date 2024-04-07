@@ -12,6 +12,9 @@ oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/marcduiker.omp.json" | Invo
 $Env:KOMOREBI_CONFIG_HOME = "$HOME\.config\komorebi"
 $Env:WHKD_CONFIG_HOME = "$HOME\.config\komorebi"
 
+# [zebar]
+$Env:ZEBAR_CONFIG_HOME = "$HOME\.glzr\zebar"
+
 #------------------------------------------------------------------#
 
 # PATHS
@@ -50,7 +53,16 @@ function y([string]$arg){
   switch ($arg){
     "stop" { Stop-Process -Name yasb -ErrorAction SilentlyContinue }
     "start" { C:/'Program Files'/yasb/yasb.exe -c "$HOME/.config/yasb/config.yaml" -s "$HOME/.config/yasb/styles.css" }
-    "restart" { y stop && y start}
+    "restart" { y stop; y start}
+  }
+}
+
+#zebar 
+function z([string]$arg) {
+  switch ($arg) {
+    "stop" { Stop-Process -Name zebar -ErrorAction SilentlyContinue }
+    "start" { Start-Process -FilePath "$env:ZEBAR_CONFIG_HOME\start.bat" }
+    "restart" { z stop; z start}
   }
 }
 
@@ -108,6 +120,11 @@ Import-Module 'C:\Program Files\gsudo\Current\gsudoModule.psd1'
 #if (!(Get-Process yasb -ErrorAction SilentlyContinue)){
 #    y start
 #}
+
+# [zebar]
+if (!(Get-Process zebar -ErrorAction SilentlyContinue)){
+  z start
+}
 
 # [komorebi]
 if (!(Get-Process komorebi -ErrorAction SilentlyContinue)){
