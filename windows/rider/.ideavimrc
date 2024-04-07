@@ -63,6 +63,7 @@ map <leader>rf :action ReformatCode<CR>
 " debug
 map <leader>dr :action Run<CR>
 map <leader>dd :action Debug<CR>
+map <leader>dc :action ChooseDebugConfiguration<CR>
 map <leader>ds :action Stop<CR>
 map <leader>dm :action RunMenu<CR>
 map <leader>db :action ToggleLineBreakpoint<CR>
@@ -70,6 +71,9 @@ nnoremap <C-S-n> :action StepOver<CR>
 nnoremap <C-S-i> :action StepInto<CR>
 nnoremap <C-S-o> :action StepOut<CR>
 nnoremap <C-S-c> :action Resume<CR>
+
+" git
+map <leader>gb :action Annotate<CR>
 
 " navigation
 nnoremap <S-b> :action Back<CR>
