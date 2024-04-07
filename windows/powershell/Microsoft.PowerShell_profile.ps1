@@ -20,6 +20,7 @@ function nav([string] $loc){
   switch ($loc){
     "personal" {Set-Location "$HOME\Documents\work\personal\"; break} 
     "warp" {Set-Location "$HOME\Documents\work\warp\"; break}
+    "backups" {Set-Location "C:\OEDatabases"; break}
     "dotfiles" {Set-Location "$HOME\Documents\work\personal\dotfiles"; break}
     "nvim-config" {Set-Location "$HOME\AppData\Local\nvim"; break}
     "nvim-data" {Set-Location "$HOME\AppData\Local\nvim-data"; break}
@@ -125,4 +126,52 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
         }
 }
 
+# Amazon SP-API Codegen
+function GenerateSDK {
+    param (
+        [string]$name
+    )
+
+    $model = ""
+    $output = $name + "API"
+    
+    switch ($name) {
+        "Listings" { 
+            $model = "listings-items-api-model\listingsItems_2021-08-01.json" 
+        }
+        "Catalog" {
+            $model = "catalog-items-api-model\catalogItems_2022-04-01.json"
+        }
+        "ProductTypesDefinitions" {
+            $model = "product-type-definitions-api-model\definitionsProductTypes_2020-09-01.json"
+        }
+        "Sellers" {
+            $model = "sellers-api-model\sellers.json"
+        }
+        Default {
+            echo "Invalid API name, please use one of the following names:"
+            echo "Listings"
+            echo "Catalog"
+            echo "ProductTypesDefinitions"
+            echo "Sellers"
+            return
+        }
+    }
+
+    $config = @{"packageName"="SellingPartnerAPI.$output"; "targetFramework"="v4.7.2"}
+    $config | ConvertTo-Json | Out-File -FilePath .\csharpConfig.json
+
+    java -jar .\swagger-codegen-cli.jar generate -i ".\selling-partner-api-models\models\$model" -l csharp -t ".\sellingpartner-api-aa-csharp\src\Amazon.SellingPartnerAPIAA\resources\swagger-codegen\templates" -o "..\$output" -c .\csharpConfig.json
+}
+
 #------------------------------------------------------------------#
+
+# Import the Chocolatey Profile that contains the necessary code to enable
+# tab-completions to function for `choco`.
+# Be aware that if you are missing these lines from your profile, tab completion
+# for `choco` will not function.
+# See https://ch0.co/tab-completion for details.
+$ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+if (Test-Path($ChocolateyProfile)) {
+  Import-Module "$ChocolateyProfile"
+}
