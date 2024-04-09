@@ -9,7 +9,7 @@ Write-Output "-------------------------------------------------------"
 
 Write-Output "----------------Installing Zebar-----------------------" 
 if(!(Test-Path -Path "C:/Program Files/Zebar")){
-  ./zebar.ps1
+  ./src/zebar.ps1
 }
 else{
     Write-Output "Already Installed"
