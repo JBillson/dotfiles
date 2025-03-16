@@ -72,21 +72,27 @@ nnoremap <C-S-i> :action StepInto<CR>
 nnoremap <C-S-o> :action StepOut<CR>
 nnoremap <C-S-c> :action Resume<CR>
 
+" sql execute
+map <leader>e : action Console.Jdbc.Execute<CR>
+
+" toggle rendered view for inline doc comments
+map <leader>r : action ToggleRenderedDocPresentationForAll<CR>
+
 " git
 map <leader>gb :action Annotate<CR>
+
+" rider inject language ref
+map <leader>[ :action IntentionActionAsAction_org.intellij.plugins.intelliLang.inject.InjectLanguageAction<CR>
 
 " navigation
 nnoremap <S-b> :action Back<CR>
 nnoremap <S-f> :action Forward<CR>
 map gi :action ReSharperGotoImplementation<CR>
+map gb :action GotoSuperMethod<CR>
+map <A-S-n> :action GotoNextError<CR>
+map <A-S-p> :action GotoPreviousError<CR>
+
+" toggle relative line numbers
+map <leader>rn :set rnu!<CR>
 
 "------------------------
-
-" ---- CODEIUM ----
-
-" ask / quick explain
-map <leader>ca :action codeium.aR<CR> 
-" refactor 
-map <leader>cr :action codeium.aS<CR>
-
-" ------------------
