@@ -153,24 +153,36 @@ function GenerateSDK {
     $output = $name + "API"
     
     switch ($name) {
-        "Listings" { 
-            $model = "listings-items-api-model\listingsItems_2021-08-01.json" 
+        "FBAInbound"{
+            $model = "fulfillment-inbound-api-model\fulfillmentInboundv2024-03-20.json"
         }
-        "Catalog" {
-            $model = "catalog-items-api-model\catalogItems_2022-04-01.json"
+        "FBAInboundV0"{
+            $model = "fulfillment-inbound-api-model\fulfillmentInboundV0.json"
         }
-        "ProductTypesDefinitions" {
-            $model = "product-type-definitions-api-model\definitionsProductTypes_2020-09-01.json"
+        "FBAInboundEligibility"{
+            $model = "fba-inbound-eligibility-api-model\fbaInbound.json"
         }
-        "Sellers" {
-            $model = "sellers-api-model\sellers.json"
+        "FBAInventory"{
+            $model = "fba-inventory-api-model\fbaInventory.json"
+        }
+        "Orders"{
+            $model = "orders-api-model\ordersV0.json"
+        }
+        "Notifications"{
+            $model = "notifications-api-model\notifications.json"
+        }
+        "Reports"{
+            $model = "reports-api-model\reports_2021-06-30.json"
         }
         Default {
             echo "Invalid API name, please use one of the following names:"
-            echo "Listings"
-            echo "Catalog"
-            echo "ProductTypesDefinitions"
-            echo "Sellers"
+            echo "FBAInbound"
+            echo "FBAInboundV0"
+            echo "FBAInboundEligibility"
+            echo "FBAInventory"
+            echo "Orders"
+            echo "Notifications"
+            echo "Reports"
             return
         }
     }
@@ -178,7 +190,7 @@ function GenerateSDK {
     $config = @{"packageName"="SellingPartnerAPI.$output"; "targetFramework"="v4.7.2"}
     $config | ConvertTo-Json | Out-File -FilePath .\csharpConfig.json
 
-    java -jar .\swagger-codegen-cli.jar generate -i ".\selling-partner-api-models\models\$model" -l csharp -t ".\sellingpartner-api-aa-csharp\src\Amazon.SellingPartnerAPIAA\resources\swagger-codegen\templates" -o "..\$output" -c .\csharpConfig.json
+    java -jar "C:\SwaggerToCL\swagger-codegen-cli.jar" generate -i "C:\SwaggerToCL\selling-partner-api-models\models\$model" -l csharp -t "C:\SwaggerToCL\selling-partner-api-models\clients\sellingpartner-api-aa-csharp\src\Amazon.SellingPartnerAPIAA\resources\swagger-codegen\templates" -o "C:\SwaggerToCL\SDKs\$output" -c "C:\SwaggerToCL\csharpConfig.json"
 }
 
 #------------------------------------------------------------------#
