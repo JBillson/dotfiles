@@ -33,6 +33,12 @@
       ]
     },
     {
+      "work_area_offset": {
+        "top": 35,
+        "bottom": 35,
+        "left": 0,
+        "right": 0
+      },
       "workspaces": [
         { "name": "I", "layout": "Columns" },
         { "name": "II", "layout": "Columns" },
